@@ -1,0 +1,9 @@
+package callback.workflow.ss.carbon.wso2.org;
+
+public class WorkflowCallbackService{
+public String resumeEvent(String workflowReference,String status, String description ){
+		
+		return status;
+	}
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.jst.ws.client.type.java">
+		<item value="http://msffayaza-tecra-m11:8280/services/orderProcessing?wsdl"/>
+		<item value="http://localhost:8080/axis2/services/OrderService?wsdl"/>
+		<item value="http://localhost:8080/OrderProcessingAxis2/services/orderProcessingService?wsdl"/>
+		<item value="http://localhost:8080/axisProject/services/orderprocessing?wsdl"/>
+		<item value="http://localhost:8080/orderProcessing/services/Order?wsdl"/>
+		<item value="http://msffayaza-tecra-m11:8280/services/hello_World?wsdl"/>
+	</list>
+</section>

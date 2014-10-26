@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:callback.workflow.ss.carbon.wso2.org="http://callback.workflow.ss.carbon.wso2.org" xmlns:createdb="http://org.wso2.carbon/createdb/" xmlns:sample="http://workflow.createdb.ss.carbon.wso2.org">
+  <process name="sample:CreateDBApprovalWorkFlowProcess">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="sample:CreateDBApprovalWorkFlowProcess" port="CreateDBApprovalWorkFlowProcessPort"/>
+    </provide>
+    <provide partnerLink="CreateDBPL">
+      <service name="createdb:CreateDBService" port="CreateDBPort"/>
+    </provide>
+    <invoke partnerLink="client">
+      <service/>
+    </invoke>
+    <invoke partnerLink="CreateDBPL">
+      <service name="createdb:CreateDBService" port="CreateDBPort"/>
+    </invoke>
+    <invoke partnerLink="CBPL">
+      <service name="callback.workflow.ss.carbon.wso2.org:WorkflowCallbackService" port="WorkflowCallbackServiceHttpEndpoint"/>
+    </invoke>
+  </process>
+</deploy>

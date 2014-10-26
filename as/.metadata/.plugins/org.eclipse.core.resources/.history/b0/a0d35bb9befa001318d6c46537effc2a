@@ -1,0 +1,28 @@
+package com.jaxRs;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+
+import sun.misc.IOUtils;
+
+
+
+
+public class client {
+		private static String SERVICE_URL = "http://10.100.4.100:9763/JAX-RS_1.0.0/1.0/services/hello";
+		 
+		public static void main(String args[]) throws Exception {
+		// setting up for sending a GET request
+		System.out.println("Sending HTTP GET request .");
+		URL url = new URL(SERVICE_URL + "/hello");
+		URLConnection connection = url.openConnection();
+		connection.setRequestProperty("accept", "text/xml");
+		InputStream in = connection.getInputStream();
+		System.out.println(url.toString());
+		
+		 
+	}
+		
+}

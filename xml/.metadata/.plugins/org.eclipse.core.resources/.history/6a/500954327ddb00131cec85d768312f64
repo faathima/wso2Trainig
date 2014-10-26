@@ -1,0 +1,16 @@
+package com.ffms.xml;
+
+public class student {
+		private String academicYear=null;
+
+		public String getAcademicYear() {
+			return academicYear;
+		}
+
+		public void setAcademicYear(String academicYear) {
+			this.academicYear = academicYear;
+		}
+		
+	
+
+}

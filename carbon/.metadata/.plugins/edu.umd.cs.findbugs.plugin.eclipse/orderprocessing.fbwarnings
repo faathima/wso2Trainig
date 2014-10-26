@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.3" sequence="1" timestamp="1404367138001" analysisTimestamp="1404367137197" release="">
+  <Project projectName="orderprocessing">
+    <Jar>/home/msffayaza/myPro/carbon/orderprocessing/target/classes</Jar>
+    <Jar>/home/msffayaza/myPro/carbon/orderprocessing/target/test-classes</Jar>
+    <AuxClasspathEntry>/home/msffayaza/myPro/carbon/orderprocessing/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/carbon/orderprocessing/target/test-classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar</AuxClasspathEntry>
+    <SrcDir>/home/msffayaza/myPro/carbon/orderprocessing/src/main/java</SrcDir>
+    <SrcDir>/home/msffayaza/myPro/carbon/orderprocessing/src/test/java</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 2 Jul 2014 12:03:14 +0530" total_classes="2" referenced_classes="35" total_bugs="0" total_size="15" num_packages="1" vm_version="24.51-b03" cpu_seconds="2.09" clock_seconds="0.81" peak_mbytes="381.45" alloc_mbytes="455.00" gc_seconds="0.02">
+    <PackageStats package="org.wso2.carbon.orderprocessing.orderprocessing" total_bugs="0" total_types="2" total_size="15">
+      <ClassStats class="org.wso2.carbon.orderprocessing.orderprocessing.App" sourceFile="App.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="org.wso2.carbon.orderprocessing.orderprocessing.AppTest" sourceFile="AppTest.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="160" invocations="362" avgMicrosecondsPerInvocation="443" maxMicrosecondsPerInvocation="5954" standardDeviationMircosecondsPerInvocation="739"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="142" invocations="35" avgMicrosecondsPerInvocation="4058" maxMicrosecondsPerInvocation="27041" standardDeviationMircosecondsPerInvocation="5515"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="98" invocations="77" avgMicrosecondsPerInvocation="1274" maxMicrosecondsPerInvocation="5225" standardDeviationMircosecondsPerInvocation="1202"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="72" invocations="2" avgMicrosecondsPerInvocation="36153" maxMicrosecondsPerInvocation="49007" standardDeviationMircosecondsPerInvocation="12854"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="49" invocations="364" avgMicrosecondsPerInvocation="137" maxMicrosecondsPerInvocation="1874" standardDeviationMircosecondsPerInvocation="119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="36" invocations="35" avgMicrosecondsPerInvocation="1055" maxMicrosecondsPerInvocation="21674" standardDeviationMircosecondsPerInvocation="3570"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="34" invocations="35" avgMicrosecondsPerInvocation="989" maxMicrosecondsPerInvocation="5956" standardDeviationMircosecondsPerInvocation="1330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="26" invocations="35" avgMicrosecondsPerInvocation="757" maxMicrosecondsPerInvocation="3628" standardDeviationMircosecondsPerInvocation="878"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1404367138001" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

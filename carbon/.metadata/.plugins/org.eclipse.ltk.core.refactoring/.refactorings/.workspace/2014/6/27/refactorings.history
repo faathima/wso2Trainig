@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;org.wso2.carbon.student.mgt/src/main/java/org.wso2.carbon.student.mgt.data&apos;" deleteContents="false" description="Delete resource &apos;org.wso2.carbon.student.mgt/src/main/java/org.wso2.carbon.student.mgt.data&apos;" element1="/org.wso2.carbon.student.mgt/src/main/java/org.wso2.carbon.student.mgt.data" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1404121950494"/>
+</session>

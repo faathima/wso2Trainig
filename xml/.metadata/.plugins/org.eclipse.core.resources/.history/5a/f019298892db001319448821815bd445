@@ -1,0 +1,98 @@
+package com.ffms.xml;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+
+public class studentHandler extends DefaultHandler  {
+	public studentHandler(){
+		
+	}
+	 private student Student=null;
+	 
+	 
+	 public student getStudent() {
+		return Student;
+	}
+	
+	 //private StringBuffer textBuffer = null;
+	 //private boolean elementOfInterest = false;
+
+
+	// start Document
+	 public void startDocument() throws SAXException { 
+	  System.out.println("startDocument");
+	 }
+	 
+	// start Element
+		 public void startElement(String namespaceURI,
+		   String sName, String qName,
+		   Attributes attributes) throws SAXException { 
+		  /*if ( qName.equalsIgnoreCase("TITLE") || qName.equalsIgnoreCase("YEAR") ) {
+		   elementOfInterest = true;
+		  }
+		  else {
+		   elementOfInterest = false;
+		  }*/
+			// System.out.println("<"+qName+">");
+			 /*if(qName.equals("academicYear")){
+				 attributes.getQName(index)
+				 Student.setAcademicYear(attributes.getValue("name"));
+				 
+				 
+			 }else
+			 System.out.print(qName + ":-");*/
+			 int length = attributes.getLength();
+			  //Each attribute
+			  for (int i=0; i<length; i++) {
+			  // Get names and values to each attribute
+			  String name = attributes.getQName(i);
+			  System.out.print(name);
+			  String value = attributes.getValue(i);
+			  System.out.println("\t"+value); }
+		 }
+	
+		 
+		// Character events
+		 public void characters(char buf[], int offset, 
+		   int len) throws SAXException {
+		  /*if ( ! elementOfInterest )
+		   return;
+		  
+		  // Accumulate the characters delivered by the parser in the buffer
+		  String str = new String(buf, offset, len);
+		  if ( textBuffer == null ) {
+		   textBuffer = new StringBuffer(str);
+		  }
+		  else {
+		   textBuffer.append(str);
+		  }*/
+			 for(int i=offset;i<(offset+len);i++){
+					System.out.print(buf[i]);
+					}
+			 
+		 }
+		 
+	public void endElement(String namespaceURI,
+				   String sName, String qName ) throws SAXException {
+				  /*if ( textBuffer == null )
+				   return;
+				  
+				  System.out.println(qName + " = " + textBuffer);
+				  textBuffer = null;
+				  elementOfInterest = false;*/
+		//System.out.println("</"+qName+">");
+		
+				 }
+
+	 public void endDocument() throws SAXException {
+	  System.out.println("end Document");
+	 }
+
+	 	
+	 
+	}
+
+
+

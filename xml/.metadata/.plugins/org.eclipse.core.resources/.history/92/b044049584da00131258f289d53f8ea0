@@ -1,0 +1,7 @@
+package com.java.xml;
+
+import DefaultHandler;
+
+public class handler extends DefaultHandler {
+
+}

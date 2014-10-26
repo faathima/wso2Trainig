@@ -1,0 +1,57 @@
+package com.orderProcessing;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.io.Serializable;
+
+
+public class order  implements Serializable {
+		
+		private Customer customer;
+
+		private ArrayList<OrderItem> orderedItems; // ArrayList of OrderItems
+
+		public order(Customer customer,ArrayList<OrderItem> orderedItems) {
+			this.customer = customer;
+			this.orderedItems = (ArrayList<OrderItem>) orderedItems.clone();
+			
+		}
+
+		public Customer customer() {
+			return customer;
+		}
+
+		public Iterator<OrderItem> orderedItems() {
+			return orderedItems.iterator();
+		}
+		
+		public double total() {
+			Iterator<OrderItem> items = orderedItems();
+			double total = 0.0;
+			while (items.hasNext()) {
+				OrderItem ordered = items.next();
+				total += ordered.quantity() * ordered.unitPrice();
+			}
+			return total;
+		}
+	
+		public void display() {
+			System.out.println("\t\t\t------- Order ------- " );
+			customer.display();
+
+			System.out.println("\n\n\tQty\tItem No. "
+					+ "\tDescription\t\tUnit Cost\n");
+
+			Iterator<OrderItem> items = orderedItems();
+			while (items.hasNext()) {
+				(items.next()).display();
+			}
+
+			System.out.println("---------------------");
+		}
+
+	}
+
+	
+
+	
+

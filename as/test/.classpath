@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry exported="true" kind="var" path="ECLIPSE_WORKSPACE/.metadata/.plugins/org.wso2.developerstudio.eclipse.libraries/lib/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/lib/jersey-client.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/lib/jersey-common.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/lib/jersey-container-servlet.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/lib/jersey-container-servlet-core.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/lib/jersey-server.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/hk2-api-2.3.0-b05.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/hk2-locator-2.3.0-b05.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/hk2-utils-2.3.0-b05.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/aopalliance-repackaged-2.3.0-b05.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/javax.inject-2.3.0-b05.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/jaxrs-ri/ext/jersey-guava-2.9.jar"/>
+	<classpathentry kind="output" path="target"/>
+</classpath>

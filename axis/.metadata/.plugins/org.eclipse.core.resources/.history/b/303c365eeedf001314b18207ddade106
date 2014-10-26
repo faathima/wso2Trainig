@@ -1,0 +1,17 @@
+package test;
+import java.rmi.RemoteException;
+
+public class client {
+	public static void main(String[] args) throws Exception {
+	     TestStub stub = new TestStub();
+	     
+	     //Creating the request
+	     test.TestStub.add  request = new  test.TestStub.add();
+	     request.setName("Java web");
+	    
+	     //Invoking the service
+	     .ws.HelloStub.SayHelloResponse response  = stub.sayHello(request);
+	     System.out.println("Response : " + response.get_return());
+	    }
+
+}

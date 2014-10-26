@@ -1,0 +1,41 @@
+package com.ws.rest;
+import javax.ws.rs.*;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
+@Path("/university")
+public class university {
+	/*@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String getHTMLUniversityInfo(){
+		
+		return "<html>"+"<title>"+"unversity information"+"</title>"+"<body>"+
+		"<h1>"+"Name-SL Universities"+"</h1>"+"</body>"+"</html>";	
+		
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getXMLUniversityInfo(){
+		
+		return 	"Name-SL Universities";
+		
+	}
+	
+	@PUT
+	@Path("{studentRollNo}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String updateUniversityInfo(@PathParam("studentRollNo")String studentRollNo){
+		return "Done Successfull";
+	}
+	*/
+	@GET
+	@Path("{studentRollNo1}/{studentRollNo2}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String setStudentInfo(
+			@PathParam("studentRollNo1")String studentRollNo1,
+			@PathParam("studentRollNo2")String studentRollNo2){
+		
+		return "you sent two parameters"+ studentRollNo1+ "and"+ studentRollNo2;
+	}
+
+}

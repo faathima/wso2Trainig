@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="student.css"?>
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+<academicYear batch="11"  xmlns:xs="http://www.example.org/studentXMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.org/studentXMLSchema studentXMLSchema.xsd ">
+
+
+ <student >
+  <name>fayaza</name>
+  <regNo>114039T</regNo>
+  <course>IT</course>
+  <phone>0774809094</phone>
+  <mail>faathima@wso2.com</mail>
+  </student>
+  
+  <student>
+  <name>dilshani</name>
+  <regNo>115050T</regNo>
+  <course>ITM</course>
+  <phone>0773375185</phone>
+  <mail>dilshani@wso2.com</mail>
+  </student>
+  </academicYear>

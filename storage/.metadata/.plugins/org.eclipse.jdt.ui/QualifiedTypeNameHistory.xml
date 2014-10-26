@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.wso2.carbon.core.services.echo.EchoStub.EchoIntResponse"/>
+<fullyQualifiedTypeName name="org.wso2.carbon.core.services.echo.EchoStub.EchoInt"/>
+<fullyQualifiedTypeName name="org.wso2.carbon.apimgt.workflow.callback.WorkflowCallbackServiceSkeleton"/>
+<fullyQualifiedTypeName name="callback.workflow.ss.carbon.wso2.org.WorkflowCallbackServiceStub.ResumeEvent"/>
+<fullyQualifiedTypeName name="callback.workflow.ss.carbon.wso2.org.WorkflowCallbackService"/>
+</qualifiedTypeNameHistroy>

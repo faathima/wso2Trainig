@@ -1,0 +1,53 @@
+package com.orderprocessing.client;
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+import org.apache.axis2.AxisFault;
+
+
+public class client {
+	
+		public static void main(String args[]){
+			//creating stub
+			try {
+				OrderProcessingServiceStub proStub=new OrderProcessingServiceStub();
+				com.orderprocessing.client.OrderProcessingServiceStub.AddOrder addOrder=new com.orderprocessing.client.OrderProcessingServiceStub.AddOrder(); 
+				//creating items for order
+				
+				//creating the date
+				//DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+				//Date date = new Date();
+				
+				//creating a order
+				com.orderprocessing.client.OrderProcessingServiceStub.Item order1=new com.orderprocessing.client.OrderProcessingServiceStub.Item();
+				String[] itemList={"Item 1 name","Item 2 name"};
+				order1.setItemList(itemList);
+				//order1.setOrderDate(dateFormat.format(date));			
+				addOrder.setOrder(order1);
+				//add order
+				com.orderprocessing.client.OrderProcessingServiceStub.AddOrderResponse respose=proStub.addOrder(addOrder);
+
+				//order count
+				com.orderprocessing.client.OrderProcessingServiceStub.GetOrderCount orderCount=new com.orderprocessing.client.OrderProcessingServiceStub.GetOrderCount();
+				com.orderprocessing.client.OrderProcessingServiceStub.GetOrderCountResponse count=proStub.getOrderCount(orderCount);
+				System.out.println("Order count :"+count.get_return());
+				
+				//remove a order
+				com.orderprocessing.client.OrderProcessingServiceStub.RemoveOrder remove=new com.orderprocessing.client.OrderProcessingServiceStub.RemoveOrder();
+				remove.setOrderId(1);
+				proStub.removeOrder(remove);
+				//check the order count
+				com.orderprocessing.client.OrderProcessingServiceStub.GetOrderCount orderCount1=new com.orderprocessing.client.OrderProcessingServiceStub.GetOrderCount();
+				com.orderprocessing.client.OrderProcessingServiceStub.GetOrderCountResponse count1=proStub.getOrderCount(orderCount1);
+				System.out.println("Order count :"+count.get_return());
+			} catch (AxisFault e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+
+

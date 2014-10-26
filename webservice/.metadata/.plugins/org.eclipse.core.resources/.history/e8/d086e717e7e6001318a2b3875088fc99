@@ -1,0 +1,24 @@
+package com.IPLocationFinderWS;
+import net.webservicex.CurrencyConvertor;
+import net.webservicex.*;
+
+public class IPLocationFinderWS {
+
+	public static void main(String[] args) {
+		Currency ALL=null;
+		Currency AFA = null;
+		
+		currnecyCon(ALL ,AFA);
+	}
+	public static double currnecyCon(Currency ALL , Currency AFA){
+
+		CurrencyConvertor currency =new CurrencyConvertor();
+		CurrencyConvertorSoap currencySoap= currency.getCurrencyConvertorSoap();
+		double c= currencySoap.conversionRate(ALL, AFA);
+		
+		return c;
+	}
+	
+	}
+
+

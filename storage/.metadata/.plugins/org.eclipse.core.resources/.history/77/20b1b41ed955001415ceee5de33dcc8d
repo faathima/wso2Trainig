@@ -1,0 +1,24 @@
+package org.wso2.carbon.com;
+import org.apache.axis2.client.ServiceClient;
+
+public class workflow{
+	public static void main(String [] args){
+		String reff;
+		String status;
+		String dbName;
+		
+		public void ResumeEvent(){
+			
+			
+			
+		}
+		
+		public void ResumeEventResponse(){
+			
+		}
+		
+		ServiceClient client =new SeriveClient();
+		
+	}
+
+}

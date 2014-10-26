@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service name="UserGuideSampleService">
+    <description>
+        This is a sample service created in the Axis2 User's Guide
+    </description>
+
+    <parameter name="ServiceClass" 
+>org.apache.axis2.axis2userguide.SampleService
+</parameter>
+
+    <operation name="sayHello">
+        <messageReceiver 
+class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/>
+    </operation>
+    <operation name="ping">
+        <messageReceiver 
+class="org.apache.axis2.receivers.RawXMLINOnlyMessageReceiver"/>
+    </operation>
+</service>

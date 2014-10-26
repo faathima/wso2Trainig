@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server port="8080">
+  <module context="com.rest" name="com.rest" path="/home/msffayaza/myPro/rest/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/com.rest" type="j2ee"/>
+</server>

@@ -1,0 +1,8 @@
+2014-08-18 16:41:49,850 [Worker-43] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-08-18 16:41:51,085 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/wso2/maven/maven-bpel-plugin/2.0.3/maven-bpel-plugin-2.0.3.pom
+2014-08-18 16:41:51,099 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.wso2.maven:maven-bpel-plugin:jar:2.0.3 is missing, no dependency information available
+2014-08-18 16:41:51,145 [Worker-43] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-08-18 16:41:51,803 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/wso2/maven/maven-bpel-plugin/2.0.3/maven-bpel-plugin-2.0.3.jar
+2014-08-19 09:00:44,320 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.wso2.maven:maven-bpel-plugin:jar:2.0.3 is missing, no dependency information available
+2014-08-25 17:24:10,100 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.wso2.maven:maven-bpel-plugin:jar:2.0.3 is missing, no dependency information available
+2014-08-26 10:04:00,507 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.wso2.maven:maven-bpel-plugin:jar:2.0.3 is missing, no dependency information available

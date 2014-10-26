@@ -1,0 +1,584 @@
+/*
+ * Copyright (c) 2011, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.wso2.carbon.humantask.core.engine;
+
+import org.apache.axiom.om.OMContainer;
+import org.apache.axiom.om.OMDataSource;
+import org.apache.axiom.om.OMElement;
+import org.apache.axiom.om.OMException;
+import org.apache.axiom.om.OMFactory;
+import org.apache.axiom.om.OMNamespace;
+import org.apache.axiom.om.OMNode;
+import org.apache.axiom.om.OMOutputFormat;
+import org.apache.axiom.om.OMXMLParserWrapper;
+import org.apache.axiom.om.util.AXIOMUtil;
+import org.apache.axiom.soap.SOAP12Constants;
+import org.apache.axiom.soap.SOAPHeaderBlock;
+import org.apache.axiom.soap.SOAPProcessingException;
+import org.apache.axiom.soap.SOAPVersion;
+import org.apache.axis2.AxisFault;
+import org.apache.axis2.Constants;
+import org.apache.axis2.addressing.EndpointReference;
+import org.apache.axis2.client.Options;
+import org.apache.axis2.client.ServiceClient;
+import org.apache.axis2.description.Parameter;
+import org.apache.axis2.description.TransportInDescription;
+import org.apache.axis2.description.TransportOutDescription;
+import org.apache.axis2.transport.http.HttpTransportProperties;
+import org.apache.axis2.transport.mail.MailConstants;
+import org.apache.axis2.transport.mail.MailTransportSender;
+import org.apache.openjpa.kernel.exps.CandidatePath.Traversal;
+import org.apache.tools.ant.taskdefs.SendEmail;
+import org.apache.tools.ant.taskdefs.email.EmailAddress;
+import org.apache.xmlbeans.QNameSet;
+import org.apache.xmlbeans.SchemaAnnotation;
+import org.apache.xmlbeans.SchemaAttributeModel;
+import org.apache.xmlbeans.SchemaField;
+import org.apache.xmlbeans.SchemaParticle;
+import org.apache.xmlbeans.SchemaProperty;
+import org.apache.xmlbeans.SchemaStringEnumEntry;
+import org.apache.xmlbeans.SchemaType;
+import org.apache.xmlbeans.SchemaTypeElementSequencer;
+import org.apache.xmlbeans.SchemaTypeLoader;
+import org.apache.xmlbeans.SchemaTypeSystem;
+import org.apache.xmlbeans.StringEnumAbstractBase;
+import org.apache.xmlbeans.XmlAnySimpleType;
+import org.apache.xmlbeans.XmlException;
+import org.apache.xmlbeans.XmlOptions;
+import org.apache.xmlbeans.SchemaType.Ref;
+import org.apache.xmlbeans.impl.schema.SchemaTypeSystemImpl;
+import org.codehaus.plexus.component.configurator.converters.composite.PropertiesConverter;
+import org.hibernate.hql.ast.util.NodeTraverser;
+import org.w3c.dom.DOMException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.UserDataHandler;
+import org.w3c.dom.traversal.TreeWalker;
+import org.wso2.caching.transport.HTTPTransportProcessor;
+import org.wso2.carbon.bpel.common.WSDLAwareMessage;
+import org.wso2.carbon.humantask.TRenderings;
+import org.wso2.carbon.humantask.TRendering;
+import org.wso2.carbon.humantask.core.api.scheduler.Scheduler;
+import org.wso2.carbon.humantask.core.configuration.HumanTaskServerConfiguration;
+import org.wso2.carbon.humantask.core.dao.HumanTaskDAOConnectionFactory;
+import org.wso2.carbon.humantask.core.dao.MessageDAO;
+import org.wso2.carbon.humantask.core.dao.TaskConfigStatus;
+import org.wso2.carbon.humantask.core.dao.TaskCreationContext;
+import org.wso2.carbon.humantask.core.dao.TaskDAO;
+import org.wso2.carbon.humantask.core.engine.event.processor.EventProcessor;
+import org.wso2.carbon.humantask.core.engine.runtime.api.ExpressionLanguageRuntime;
+import org.wso2.carbon.humantask.core.engine.runtime.xpath.XPathExpressionRuntime;
+import org.wso2.carbon.humantask.core.internal.HumanTaskServiceComponent;
+import org.wso2.carbon.humantask.core.store.HumanTaskBaseConfiguration;
+import org.wso2.carbon.humantask.core.store.HumanTaskStore;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+import java.net.PasswordAuthentication;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+import java.util.concurrent.Callable;
+
+import javax.mail.Address;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessageContext;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.xml.namespace.QName;
+import javax.xml.soap.MimeHeader;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
+import javax.xml.stream.XMLStreamWriter;
+
+/**
+ * The human task engine. The responsibility of this class is to invoke task
+ * creation logic.
+ */
+public class HumanTaskEngine {
+	/**
+	 * The DAO connection factory as an abstraction to the underlying
+	 * persistence implementation
+	 */
+	private HumanTaskDAOConnectionFactory daoConnectionFactory;
+
+	/**
+	 * The people query evaluator
+	 */
+	private PeopleQueryEvaluator peopleQueryEvaluator;
+
+	/** The expression */
+	private Map<String, ExpressionLanguageRuntime> expressionLanguageRuntimeRegistry;
+
+	/** */
+	private EventProcessor eventProcessor;
+
+	/**
+	 * Deadline scheduler
+	 */
+	private Scheduler scheduler;
+
+	public HumanTaskEngine() {
+		initExpressionLanguageRuntimes();
+	}
+
+	private void initExpressionLanguageRuntimes() {
+		expressionLanguageRuntimeRegistry = new HashMap<String, ExpressionLanguageRuntime>();
+		expressionLanguageRuntimeRegistry.put(XPathExpressionRuntime.ns,
+				new XPathExpressionRuntime());
+	}
+
+	// create task logic.
+	private TaskDAO createTask(WSDLAwareMessage message,
+			HumanTaskBaseConfiguration taskConfiguration, int tenantId)
+			throws HumanTaskException {
+
+		TaskCreationContext creationContext = new TaskCreationContext();
+		creationContext.setTaskConfiguration(taskConfiguration);
+		creationContext.setTenantId(tenantId);
+		creationContext.setMessageBodyParts(message.getBodyPartElements());
+		creationContext.setMessageHeaderParts(message.getHeaderPartElements());
+		creationContext.setPeopleQueryEvaluator(peopleQueryEvaluator);
+		String emailAddress = "mailto:faathima@wso2.com";
+		System.out.print(message.getOperationName());
+		sendMail(message, emailAddress, taskConfiguration);
+
+		// taskConfiguration.getRenderings().getDomNode();
+
+		// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+		try {
+			// org.wso2.carbon.humantask.TPresentationParameter
+			// tr=org.wso2.carbon.humantask.TPresentationParameter.Factory.parse(taskConfiguration.getHumanTaskDefinitionFile());
+			// System.out.print("hurre"+tr.getDomNode().getChildNodes().item(1).getLocalName());
+
+			/*
+			 * } catch (XmlException e1) { // TODO Auto-generated catch block
+			 * e1.printStackTrace();
+			 */
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		/*
+		 * TPresentationElements
+		 * tPresentationElements=taskConfiguration.getPresentationElements();
+		 * TPresentationParameters
+		 * t=tPresentationElements.getPresentationParameters();
+		 * TPresentationParameter ts=t.getPresentationParameterArray(1); Node
+		 * g=ts.getDomNode(); String
+		 * s="<h1>The task is a "+taskConfiguration.getConfigurationType
+		 * ().toString() + " The Element value is :"+ts.xmlText() +
+		 * " The other value is :"+g.getNodeValue() + "</h1>";
+		 */
+		// System.out.println(s);
+		/*
+		 * OMElement documentElement =
+		 * AXIOMUtil.stringToOM("<h1>The task is a "+
+		 * taskConfiguration.getConfigurationType().toString() +
+		 * " The Element value is :"+ts.xmlText() +
+		 * " The other value is :"+g.getNodeValue() + "</h1>");
+		 */
+		StringBuilder sm = new StringBuilder("<h1>");
+		Map<String, Element> map = message.getBodyPartElements();
+		Object[] set = map.keySet().toArray();
+		NodeList n = map.get(set[0]).getChildNodes();
+
+		/*
+		 * try { TPublish tp=TPublish.Factory.parse(new
+		 * File("src/main/resources/schemas/hi-config.xsd"));
+		 * System.out.print(tp.getDomNode().getTextContent()); } catch
+		 * (XmlException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); } catch (IOException e) { // TODO Auto-generated
+		 * catch block e.printStackTrace(); }
+		 */
+
+		// sm.append("<h1> text "+map.get(set[0]).getAttribute(ts.getName())+" is "+map.get(set[0]).getChildNodes().getLength()+"</h1>");
+
+		/*
+		 * OMElement documentElement =
+		 * AXIOMUtil.stringToOM("<h1>The task is a "+
+		 * taskConfiguration.getConfigurationType().toString() +
+		 * " The Element value is :"+ts.xmlText() +
+		 * " The other value is :"+g.getNodeValue() + "</h1>");
+		 */
+
+		// //////////////////////////////////////////////////////////////////////////////////////////
+
+		// /////////*************************/////////////////////////
+		System.out.println("String "
+				+ taskConfiguration.getRenderings().toString());
+
+		try {
+			org.wso2.carbon.humantask.TRenderings tr = org.wso2.carbon.humantask.TRenderings.Factory
+					.parse(taskConfiguration.getHumanTaskDefinitionFile());
+	/*System.out.println("hurre"
+					+ tr.getDomNode().getChildNodes().item(1).getLocalName());
+			System.out.println("hurre"
+					+ tr.getDomNode().getChildNodes().item(1).hasChildNodes());
+			System.out.println("hure"
+					+ tr.getDomNode().getChildNodes().item(1).getChildNodes()
+							.item(1).getChildNodes().item(1).getTextContent());
+		
+
+			/*
+			 * } catch (XmlException e1) { // TODO Auto-generated catch block
+			 * e1.printStackTrace();
+			 */
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		TRenderings tRenderings = taskConfiguration.getRenderings();
+		 TRendering tk= tRenderings.getRenderingArray(0);
+		
+		 System.out.println(tk.getDomNode().getChildNodes().item(1).getLocalName());
+		// System.out.println(tk.getDomNode().getChildNodes().item(1).getTextContent());
+		 Node g = tk.getDomNode().getChildNodes().item(1);
+		 System.out.println(g.getLocalName());
+		// TPresentationParameters
+		// t=tPresentationElements.getPresentationParameters();
+		// TPresentationParameter ts=t.getPresentationParameterArray(1);
+		// Node g=tr.getDomNode();
+		String s="<h1>The task is a "+taskConfiguration.getConfigurationType().toString()
+		+" The Element value is :"+tk.xmlText()
+	+" The other value is :"+g.getNodeValue()
+		+"</h1>";
+	System.out.println(s);
+		
+		  try {
+			OMElement documentElement =
+			  AXIOMUtil.stringToOM("<h1>The task is a "+
+			  taskConfiguration.getConfigurationType().toString() +
+			  " The Element value is :"+tk.xmlText() +
+			  " The other value is :"+g.getNodeValue() + "</h1>");
+			
+			System.out.println(documentElement);
+		} catch (DOMException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (XMLStreamException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+		return getDaoConnectionFactory().getConnection().createTask(
+				creationContext);
+	}
+
+	/**
+	 * The invoke method called when the
+	 * {@link org.wso2.carbon.humantask.core.integration.AxisHumanTaskMessageReceiver}
+	 * is called for task creation .
+	 * 
+	 * @param message
+	 *            : The wsdl message containing the task creation logic.
+	 * @return : The task ID.
+	 * @throws HumanTaskException
+	 *             : If the task creation fails.
+	 */
+	public String invoke(final WSDLAwareMessage message,
+			final HumanTaskBaseConfiguration taskConfiguration)
+			throws Exception {
+		TaskDAO task = scheduler.execTransaction(new Callable<TaskDAO>() {
+			public TaskDAO call() throws Exception {
+				HumanTaskStore taskStore = HumanTaskServiceComponent
+						.getHumanTaskServer().getTaskStoreManager()
+						.getHumanTaskStore(message.getTenantId());
+				// return createTask(message,
+				// taskStore.getTaskConfiguration(message.getPortTypeName(),
+				// message.getOperationName()),
+				// message.getTenantId());
+				return createTask(message, taskConfiguration,
+						message.getTenantId());
+			}
+		});
+
+		return task.getId().toString();
+	}
+
+	public void sendMail(WSDLAwareMessage message, String emailAddress,
+			HumanTaskBaseConfiguration taskConfiguration) {
+		ServiceClient serviceClient = null;
+		try {
+			serviceClient = new ServiceClient();
+
+			Options options = serviceClient.getOptions();
+			options.setSenderTransport("mailto",
+					serviceClient.getAxisConfiguration());
+			// options.setTransportOut(new
+			// TransportOutDescription(Constants.TRANSPORT_MAIL));
+			// options.setTransportIn(new
+			// TransportInDescription(Constants.TRANSPORT_MAIL));
+			EndpointReference targetEPR = new EndpointReference(emailAddress);
+			options.setTo(targetEPR);
+			options.setProperty("Subject", "This is subject");
+			Properties p = new Properties();
+			p.setProperty("scope", "axis2");
+			p.setProperty("value", "text/html");
+			options.setProperty("messageType", "text/html");
+			options.setProperty("ContentType", "text/html");
+			options.setProperty("scope", "transport");
+			options.setSoapVersionURI(SOAP12Constants.SOAP_ENVELOPE_NAMESPACE_URI);
+			HttpTransportProperties.MailProperties mailProperties = new HttpTransportProperties.MailProperties();
+			mailProperties.addProperty("Subject", "This is subject");
+			System.out.print(Constants.TRANSPORT_HTTP);
+			System.out.print(Constants.TRANSPORT_MAIL);
+			// //////////////////////////////////////////////////////////////////////////////////////////////////////
+			String mail_to = "faathima@wso2.com";
+
+			String mail_from = "msf.fayaza89@gmail.com";// using gmail server
+
+			String mail_subject = "Notification Reminder";
+			StringBuilder sm = new StringBuilder("<h1>");
+			Map<String, Element> map = message.getBodyPartElements();
+			Object[] set = map.keySet().toArray();
+			NodeList n = map.get(set[0]).getChildNodes();
+
+			for (int i = 0; i < n.getLength(); i++) {
+				if (n.item(i).getLocalName() != null) {
+
+					sm.append(n.item(i).getLocalName() + " : "
+							+ n.item(i).getTextContent());
+				}
+			}
+			sm.append("</h1>");
+			String mail_body = sm.toString();
+			String personalName = "msf.fayaza";
+
+			String encodingOptions = "text/html; charset=UTF-8";
+			Properties props = new Properties();
+			ArrayList<Parameter> mv = serviceClient.getAxisConfiguration()
+					.getTransportOut("mailto").getParameters();
+
+			for (int i = 0; i < mv.size(); i++) {
+				System.out.println(mv.get(i).getName() + " : "
+						+ mv.get(i).getValue());
+				props.put(mv.get(i).getName(), mv.get(i).getValue());
+			}
+
+			Authenticator auth = new SMTPAuthenticator();
+
+			// props.put("mail.smtp.host", host);
+			/*
+			 * props.put("mail.smtp.host", host);
+			 * props.put("mail.smtp.starttls.enable", "true");
+			 * props.put("mail.smtp.auth", "true"); props.put("mail.smtp.port",
+			 * "587");
+			 */
+			System.out.println(props);
+
+			Session session = Session.getDefaultInstance(props, auth);
+
+			MimeMessage messagew = new MimeMessage(session);
+			messagew.setContent("Hello", "text/plain");
+			messagew.setSubject(mail_subject);
+			messagew.setText(mail_body);
+			messagew.setHeader("Content-Type", encodingOptions);
+			// message.setHeader(mail_head_name, mail_head_value);
+			messagew.setSentDate(new Date());
+
+			// Address address = new InternetAddress(mail_from, personalName);
+			// messagew.setFrom(address);
+
+			Address toaddress = new InternetAddress(mail_to);
+			messagew.addRecipient(Message.RecipientType.TO, toaddress);
+
+			System.out.println(message);
+
+			Transport.send(messagew);
+			System.out.println("Send Mail Ok!");
+			// //////////////////////////////////////////////////////////////////////////////////////////////////
+			options.setProperty(Constants.TRANSPORT_HTTP, mailProperties);
+			// options.setTransportIn(new
+			// TransportInDescription(Constants.TRANSPORT_MAIL));
+			// options.setTransportOut(new
+			// TransportOutDescription(Constants.TRANSPORT_MAIL));
+			/*
+			 * options.setTransportOut(new TransportOutDescription("mailto"));
+			 * options.getTransportOut().addParameter(new
+			 * Parameter("Subject","THis is it"));
+			 */
+			// serviceClient.removeHeaders();
+			// options.setProperty("FORCE_SC_ACCEPTED","true");
+			/*
+			 * Properties props = new Properties(); props.put("mail.smtp.host",
+			 * "smtp.gmail.com"); props.put("mail.smtp.port", "587");
+			 * props.put("mail.smtp.starttls.enable", "true");
+			 * props.put("mail.smtp.auth", "true"); props.put("mail.smtp.user",
+			 * "drifftr"); props.put("mail.smtp.password", "kaputa32"); Session
+			 * session = Session.getDefaultInstance(props, null);
+			 * 
+			 * String msgBody = "This is Mime Message";
+			 * 
+			 * 
+			 * Message msg = new MimeMessage(session); msg.setFrom(new
+			 * InternetAddress("drifftr@gmail.com", "Example.com Admin"));
+			 * msg.addRecipient(Message.RecipientType.TO, new
+			 * InternetAddress("heshitha@wso2.com", "Mr. User"));
+			 * msg.setSubject("Your Example.com account has been activated");
+			 * msg.setHeader("mail.smtp.host", "smtp.gmail.com");
+			 * msg.setHeader("mail.smtp.port", "587");
+			 * msg.setHeader("mail.smtp.starttls.enable", "true");
+			 * msg.setHeader("mail.smtp.auth", "true");
+			 * msg.setHeader("mail.smtp.user", "drifftr");
+			 * msg.setHeader("mail.smtp.password", "kaputa32");
+			 * 
+			 * 
+			 * msg.setText(msgBody); Transport.send(msg);
+			 * System.out.print("msgtoString"+msg.toString());
+			 * System.out.print("msgcontent"+msg.getContentType());
+			 */
+			serviceClient.removeHeaders();
+			System.out.print("mailcons:" + MailConstants.MAIL_SMTP_USERNAME);
+			System.out.print("mailcons:" + MailConstants.MAIL_HEADER_FROM);
+			serviceClient.addStringHeader(new QName("soapenv", "Subject",
+					"myns"), "This is some vital information");
+			// options.setAction("MyAction");
+			// serviceClient.engageModule("Addressing");
+
+			// sm.append("<Subject>This is a subject</Subject>");
+			// String sn="<h1>This is Subject</h1>";
+			serviceClient.engageModule("addressing");
+			// serviceClient.fireAndForget(AXIOMUtil.stringToOM(sm.toString()));
+		} catch (AxisFault e) {
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	class SMTPAuthenticator extends javax.mail.Authenticator {
+		public javax.mail.PasswordAuthentication getPasswordAuthentication() {
+			return new javax.mail.PasswordAuthentication("msf.fayaza89",
+					"ffms1989");
+		}
+	}
+
+	/*
+	 * public StringBuilder traverse(Node node,StringBuilder sm,int i){
+	 * //System.out.print(node.getLocalName()); if(node.hasChildNodes()){
+	 * NodeList n=node.getChildNodes(); if(i<n.getLength()-1){ i++;
+	 * traverse(n.item(i),sm,i); } return sm; }else{
+	 * if(node.getLocalName()!=null){ sm.append(node.getLocalName()+" : " +
+	 * node.getTextContent()); return sm; }else{ return sm; } }
+	 * 
+	 * }
+	 */
+	public StringBuilder traverse(WSDLAwareMessage message,
+			HumanTaskBaseConfiguration taskConfiguration, StringBuilder sm,
+			int i) {
+		// System.out.print(node.getLocalName());
+		// taskConfiguration.get
+		return sm;
+
+	}
+
+	/**
+	 * @return : The {@link HumanTaskDAOConnectionFactory}
+	 */
+	public HumanTaskDAOConnectionFactory getDaoConnectionFactory() {
+		return daoConnectionFactory;
+	}
+
+	/**
+	 * @param daoConnectionFactory
+	 *            : The DAO Connection Factory.
+	 */
+	public void setDaoConnectionFactory(
+			HumanTaskDAOConnectionFactory daoConnectionFactory) {
+		this.daoConnectionFactory = daoConnectionFactory;
+	}
+
+	/**
+	 * @param pqe
+	 *            : The people query evaluator to set.
+	 */
+	public void setPeopleQueryEvaluator(PeopleQueryEvaluator pqe) {
+		this.peopleQueryEvaluator = pqe;
+	}
+
+	/**
+	 * @return : The people query evaluator for people evaluations.
+	 */
+	public PeopleQueryEvaluator getPeopleQueryEvaluator() {
+		return peopleQueryEvaluator;
+	}
+
+	/**
+	 * @param language
+	 *            : The required type of the expression language.
+	 * @return : The ExpressionLanguageRuntime object.
+	 */
+	public ExpressionLanguageRuntime getExpressionLanguageRuntime(
+			String language) {
+		ExpressionLanguageRuntime epxLanguageRuntime = null;
+		if (expressionLanguageRuntimeRegistry != null) {
+			epxLanguageRuntime = expressionLanguageRuntimeRegistry
+					.get(language);
+		}
+		return epxLanguageRuntime;
+	}
+
+	/**
+	 * @return : The scheduler:
+	 */
+	public Scheduler getScheduler() {
+		return scheduler;
+	}
+
+	/**
+	 * @param scheduler
+	 *            : The Scheduler object to set.
+	 */
+	public void setScheduler(Scheduler scheduler) {
+		this.scheduler = scheduler;
+	}
+
+	/**
+	 * 
+	 * @param eventProcessor
+	 */
+	public void setEventProcessor(EventProcessor eventProcessor) {
+		this.eventProcessor = eventProcessor;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public EventProcessor getEventProcessor() {
+		return this.eventProcessor;
+	}
+
+}

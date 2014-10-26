@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="academicYear" type="aca"/>
+		<xs:complexType  name="aca">
+			<xs:sequence>
+				<xs:element ref="student" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="batch" type="xs:int" use="required" />
+		</xs:complexType>
+	
+
+
+	<xs:element name="student">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name" />
+				<xs:element ref="regNo" />
+				<xs:element ref="course" />
+				<xs:element ref="phone" />
+				<xs:element ref="mail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="name" type="xs:string" />
+	<xs:element name="regNo" type="xs:string" />
+	<xs:element name="course" type="xs:string" />
+	<xs:element name="phone" type="xs:string" />
+	<xs:element name="mail" type="xs:string" />
+
+</xs:schema>

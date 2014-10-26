@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu May 29 19:56:17 IST 2014
+org.eclipse.jst.jee.server\:wsREST=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/wsREST
+org.eclipse.jst.jee.server\:wsSOAP=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/wsSOAP

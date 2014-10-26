@@ -1,0 +1,57 @@
+package com.orderProcessing;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+
+public class Order {
+		
+		//private Customer customer;
+
+		private ArrayList<OrderItem> orderedItems; 
+		
+		public Order() {
+			//this.customer = customer;
+			this.orderedItems = new ArrayList<OrderItem>();
+			
+			orderedItems.add(new OrderItem("ffms",5,6,7));
+			//orderedItems.add(new OrderItem(4,3,2));
+			//orderedItems.add(new OrderItem(2,3,4));
+			
+		}
+		
+		/*public Customer customer() {
+			return customer();
+		}*/
+		
+		
+		public Iterator<OrderItem> orderedItems() {
+			return orderedItems.iterator();
+		}
+		
+		public double total() {
+			Iterator<OrderItem> items = orderedItems();
+			double total = 0.0;
+			while (items.hasNext()) {
+				OrderItem ordered = items.next();
+				total += ordered.Quantity() * ordered.UnitPrice();
+			}
+			return total;
+		}
+	
+		public void display() {
+			System.out.println("\t\t\t------- Order ------- " );
+			//customer.display();
+
+			System.out.println("\n\n\tQty\tItem No. "
+					+ "\tDescription\t\tUnit Cost\n");
+
+			Iterator<OrderItem> items = orderedItems();
+			while (items.hasNext()) {
+				(items.next()).display();
+			}
+
+			System.out.println("---------------------");
+		}
+
+	}

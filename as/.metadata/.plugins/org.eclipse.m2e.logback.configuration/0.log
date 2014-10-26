@@ -1,0 +1,71 @@
+2014-06-23 13:28:38,257 [Worker-38] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-06-23 13:28:40,320 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.wso2.org/nexus/content/groups/wso2-public/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.pom
+2014-06-23 13:28:40,339 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.wso2.org/nexus/content/groups/wso2-public/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.pom
+2014-06-23 13:28:40,437 [Worker-38] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-06-23 13:28:41,409 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.wso2.org/nexus/content/groups/wso2-public/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar
+2014-06-23 13:28:43,578 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.wso2.org/nexus/content/groups/wso2-public/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar
+2014-06-23 17:53:04,315 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-egit does not contain lifecycle mapping metadata
+2014-06-23 17:53:04,320 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive does not contain lifecycle mapping metadata
+2014-06-23 17:53:04,321 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subclipse does not contain lifecycle mapping metadata
+2014-06-23 17:54:13,928 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: WSO2:WSO2-Axis2-Client:0.0.1-SNAPSHOT @ /home/msffayaza/myPro/as/hello/pom.xml.
+2014-06-23 17:54:15,005 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hello/src/main/java
+2014-06-23 17:54:15,006 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hello/src/test/java
+2014-06-23 17:54:15,147 [Worker-7] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Project import completed 1 sec
+2014-06-23 17:54:15,207 [Worker-9] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2014-06-23 17:54:15,208 [Worker-9] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2014-06-23 17:54:15,424 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: WSO2:WSO2-Axis2-Client:0.0.1-SNAPSHOT @ /home/msffayaza/myPro/as/hello/pom.xml.
+2014-06-23 17:54:15,721 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-23 17:54:15,722 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/main/resources
+2014-06-23 17:54:15,727 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-23 17:54:15,727 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/test/resources
+2014-06-23 17:54:15,808 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: WSO2:WSO2-Axis2-Client:0.0.1-SNAPSHOT @ /home/msffayaza/myPro/as/hello/pom.xml.
+2014-06-23 17:54:16,808 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-23 17:54:16,809 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/main/resources
+2014-06-23 17:54:16,812 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-23 17:54:16,812 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/test/resources
+2014-06-23 20:38:30,222 [ModalContext] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-06-23 20:38:34,136 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/maven-metadata.xml
+2014-06-23 20:38:34,142 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/maven-metadata.xml
+2014-06-23 20:38:34,572 [ModalContext] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-06-23 20:38:35,599 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+2014-06-23 20:38:35,602 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+2014-06-24 10:10:55,852 [ModalContext] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 8
+2014-06-24 10:10:56,866 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.wso2.org/nexus/content/groups/wso2-public/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.jar
+2014-06-24 10:10:58,659 [New I/O client worker #1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.wso2.org/nexus/content/groups/wso2-public/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.jar
+2014-06-24 10:11:03,040 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-egit does not contain lifecycle mapping metadata
+2014-06-24 10:11:03,042 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive does not contain lifecycle mapping metadata
+2014-06-24 10:11:03,043 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subclipse does not contain lifecycle mapping metadata
+2014-06-24 10:14:44,639 [Worker-33] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: WSO2:WSO2-Axis2-Client:0.0.1-SNAPSHOT @ /home/msffayaza/myPro/as/hello/pom.xml.
+2014-06-24 10:14:45,501 [Worker-33] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hello/src/main/java
+2014-06-24 10:14:45,502 [Worker-33] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hello/src/test/java
+2014-06-24 10:14:45,738 [Worker-33] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Project import completed 1 sec
+2014-06-24 10:14:45,781 [Worker-33] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2014-06-24 10:14:45,782 [Worker-33] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2014-06-24 10:14:45,990 [Worker-38] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: WSO2:WSO2-Axis2-Client:0.0.1-SNAPSHOT @ /home/msffayaza/myPro/as/hello/pom.xml.
+2014-06-24 10:14:46,293 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-24 10:14:46,293 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/main/resources
+2014-06-24 10:14:46,297 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-24 10:14:46,298 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/test/resources
+2014-06-24 10:14:46,887 [Worker-36] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: WSO2:WSO2-Axis2-Client:0.0.1-SNAPSHOT @ /home/msffayaza/myPro/as/hello/pom.xml.
+2014-06-24 10:14:47,431 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-24 10:14:47,432 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/main/resources
+2014-06-24 10:14:47,443 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-24 10:14:47,445 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/test/resources
+2014-06-24 10:14:52,294 [Worker-29] ERROR o.e.m.c.i.p.ProjectConfigurationManager - Project hello already exists
+2014-06-24 10:14:52,295 [Worker-29] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Project import completed 0 sec
+2014-06-24 10:16:31,773 [Worker-4] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2014-06-24 10:16:33,667 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: WSO2:WSO2-Axis2-Client:0.0.1-SNAPSHOT @ /home/msffayaza/myPro/as/hello/pom.xml.
+2014-06-24 10:16:34,150 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Source directory: /home/msffayaza/myPro/as/hello/generated-sources/src added.
+2014-06-24 10:16:34,284 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hello/src/main/java
+2014-06-24 10:16:34,285 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hello/generated-sources/src
+2014-06-24 10:16:34,285 [Worker-4] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hello/src/test/java
+2014-06-24 10:16:34,525 [Worker-4] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2014-06-24 10:16:34,946 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: WSO2:WSO2-Axis2-Client:0.0.1-SNAPSHOT @ /home/msffayaza/myPro/as/hello/pom.xml.
+2014-06-24 10:16:35,504 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Source directory: /home/msffayaza/myPro/as/hello/generated-sources/src added.
+2014-06-24 10:16:35,531 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-24 10:16:35,532 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/main/resources
+2014-06-24 10:16:35,536 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-24 10:16:35,536 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/msffayaza/myPro/as/hello/src/test/resources
+2014-06-24 11:56:22,143 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-egit does not contain lifecycle mapping metadata
+2014-06-24 11:56:22,149 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive does not contain lifecycle mapping metadata
+2014-06-24 11:56:22,151 [ModalContext] WARN  o.e.m.i.discovery.MavenDiscovery - CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subclipse does not contain lifecycle mapping metadata

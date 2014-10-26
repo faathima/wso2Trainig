@@ -1,0 +1,3 @@
+org/wso2/carbon/orderprocessing/Product.class
+org/wso2/carbon/orderprocessing/Order.class
+org/wso2/carbon/orderprocessing/OrderProcessingService.class

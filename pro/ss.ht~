@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) OASIS Open 2009. All Rights Reserved.
+-->
+<htd:humanInteractions>
+
+    <htd:documentation>
+        
+    </htd:documentation>
+
+    <htd:import/>
+
+    <htd:logicalPeopleGroups>
+	<htd:logicalPeopleGroup name="regionalClerks">
+            <htd:documentation xml:lang="en-US">
+                The group of clerks responsible for the region specified.
+            </htd:documentation>
+            <htd:parameter name="role" type="xsd:string"/>
+        </htd:logicalPeopleGroup>
+
+        <htd:logicalPeopleGroup name="regionalManager">
+            <htd:documentation xml:lang="en-US">
+                The manager responsible for the region specified.
+            </htd:documentation>
+            <htd:parameter name="role" type="xsd:string"/>
+        </htd:logicalPeopleGroup>
+
+        <htd:logicalPeopleGroup name="clerksManager">
+            <htd:documentation xml:lang="en-US">
+                The manager of the clerk whose user ID is passed as parameter.
+            </htd:documentation>
+            <htd:parameter name="role" type="xsd:string"/>
+        </htd:logicalPeopleGroup>
+
+        <htd:logicalPeopleGroup name="directorClaims">
+            <htd:documentation xml:lang="en-US">
+                The functional director responsible for claims processing.
+            </htd:documentation>
+        </htd:logicalPeopleGroup>
+
+    </htd:logicalPeopleGroups>
+
+
+    <htd:tasks>
+        <htd:task name="Delete DB">
+            <htd:documentation xml:lang="en-US">
+                This task is used to handle claims that require manual
+                approval.
+            </htd:documentation>
+
+            <htd:interface portType=""
+                           operation=""
+                           responsePortType=""
+                           responseOperation=""/>
+
+            <htd:priority>
+               
+            </htd:priority>
+
+            <htd:peopleAssignments>
+
+                <htd:potentialOwners>
+                    <htd:from logicalPeopleGroup="">
+                        <htd:argument name="role">
+                            
+                        </htd:argument>
+                    </htd:from>
+                </htd:potentialOwners>
+
+                <htd:businessAdministrators>
+                    <htd:from logicalPeopleGroup="">
+                        <htd:argument name="role">
+                          
+                        </htd:argument>
+                    </htd:from>
+                </htd:businessAdministrators>
+
+            </htd:peopleAssignments>
+
+            <htd:delegation potentialDelegatees=""/>
+
+            <htd:presentationElements>
+                <htd:name xml:lang="en-US">SS Approve </htd:name>
+                
+                <htd:presentationParameters>
+                    <htd:presentationParameter name="Delete DB"
+                                               type="xsd:string">
+                        htd:getInput("ClaimApprovalRequest")/test10:cust/test10:firstname
+                    </htd:presentationParameter>
+                   
+                </htd:presentationParameters>
+
+                <htd:subject xml:lang="en-US">
+                    Delete database
+                </htd:subject>
+                
+                <htd:description xml:lang="en-US" contentType="text/plain">
+                    Delete this DB 
+                </htd:description>
+
+                <htd:description xml:lang="en-US" contentType="text/html">
+                    <![CDATA[
+          <p> Delete Data Base </p>
+          ]]>
+                </htd:description>
+                
+            </htd:presentationElements>
+        </htd:task>
+    </htd:tasks>
+
+
+    <htd:notifications>
+        <htd:notification name="Delete DB Remainder">
+                  </htd:notification>
+    </htd:notifications>
+
+</htd:humanInteractions>

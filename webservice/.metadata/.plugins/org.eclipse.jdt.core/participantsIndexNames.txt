@@ -1,0 +1,13 @@
+INDEX VERSION 1.126
+/home/msffayaza/myPro/webservice/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2345100026.index
+/wsSOAP/src
+/home/msffayaza/myPro/webservice/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4294811527.index
+/wsREST/src
+/home/msffayaza/myPro/webservice/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1145550173.index
+/wsREST/src
+/home/msffayaza/myPro/webservice/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/283960999.index
+/wsSOAP/src
+/home/msffayaza/myPro/webservice/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2503984352.index
+/wsREST/src
+/home/msffayaza/myPro/webservice/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1275547300.index
+/wsSOAP/src

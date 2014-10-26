@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;JAXPSAXPrj01&apos;&#x0A;- Original project: &apos;JAXPSAXPrj01&apos;&#x0A;- Original elements:&#x0A;     zaneacademy.out.out.xml&#x0A;     zaneacademy.out.xml" description="Delete elements" element1="zaneacademy.out.out.xml" element2="zaneacademy.out.xml" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1400061999112" subPackages="false" version="1.0"/>
+</session>

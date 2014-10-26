@@ -1,0 +1,12 @@
+package com.za.tutorial.java.xml;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+public class ParseWithSAXParserDriver {
+
+	public static void main(String[] args) {
+		SAXParser sAXParser=(SAXParserFactory.newInstance()).newSAXParser();
+	}
+
+}

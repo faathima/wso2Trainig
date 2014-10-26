@@ -1,0 +1,27 @@
+{
+"employees": [
+{
+"id": "1",
+"name": "Kasun",
+"age": "25",
+"town": "Galle",
+"salary": "40000"
+},
+{
+"id": "3",
+"name": "Sunil",
+"age": "29",
+"town": "Colombo",
+"salary": "20000"
+},
+{
+"id": "4",
+"name": "Rani",
+"age": "32",
+"town": "Kandy",
+"salary": "60000"
+}
+]
+ 
+ 
+}

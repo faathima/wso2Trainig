@@ -1,0 +1,19 @@
+package testClient;
+import test.test.TestStub.*;
+
+public class Client {
+
+	public static void main(String[] args) throws Exception {
+	     TestStub stub = new TestStub();
+	    
+	     //Creating the request
+	     test.HelloStub.SayHello  request = new  com.training.HelloStub.SayHello();
+	     request.setName("Java web");
+	   
+	     //Invoking the service
+	     com.training.HelloStub.SayHelloResponse response  = stub.sayHello(request);
+	     System.out.println("Response : " + response.get_return());
+	    }
+	
+
+}

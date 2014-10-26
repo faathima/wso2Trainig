@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.3" sequence="1" timestamp="1404367354415" analysisTimestamp="1404367349077" release="">
+  <Project projectName="OrderProcessingAxis2">
+    <Jar>/home/msffayaza/myPro/axis/OrderProcessingAxis2/build/classes</Jar>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/build/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat-util.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat7-websocket.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat-i18n-fr.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat-i18n-es.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/jasper.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/annotations-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/catalina-ha.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/catalina-tribes.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat-coyote.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/catalina.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/catalina-ant.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/websocket-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/jasper-el.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/ecj-P20140317-1600.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/jsp-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat-jdbc.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/el-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/server/apache-tomcat-7.0.53/lib/tomcat-i18n-ja.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/XmlSchema-1.4.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/antlr-2.7.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axiom-api-1.2.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axiom-dom-1.2.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axiom-impl-1.2.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-adb-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-adb-codegen-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-ant-plugin-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-clustering-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-codegen-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-corba-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-fastinfoset-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-java2wsdl-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-jaxbri-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-jaxws-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-jibx-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-json-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-kernel-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-metadata-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-mtompolicy-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-saaj-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-soapmonitor-servlet-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-spring-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-transport-http-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-transport-local-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/axis2-xmlbeans-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/commons-cli-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/commons-fileupload-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/commons-io-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/commons-logging-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/geronimo-stax-api_1.0_spec-1.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/httpcore-4.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/log4j-1.2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/mail-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/neethi-3.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/woden-api-1.0M9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/woden-impl-commons-1.0M9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/woden-impl-dom-1.0M9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/wsdl4j-1.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/wstx-asl-3.2.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/lib/xmlbeans-2.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/msffayaza/myPro/axis/OrderProcessingAxis2/WebContent/WEB-INF/classes</AuxClasspathEntry>
+    <SrcDir>/home/msffayaza/myPro/axis/OrderProcessingAxis2/src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE" first="1">
+    <Class classname="com.orderProcessing.OrderProcessingService">
+      <SourceLine classname="com.orderProcessing.OrderProcessingService" sourcefile="OrderProcessingService.java" sourcepath="com/orderProcessing/OrderProcessingService.java"/>
+    </Class>
+    <Method classname="com.orderProcessing.OrderProcessingService" name="addOrder" signature="([Ljava/lang/String;[I)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.orderProcessing.OrderProcessingService" start="23" end="45" startBytecode="0" endBytecode="476" sourcefile="OrderProcessingService.java" sourcepath="com/orderProcessing/OrderProcessingService.java"/>
+    </Method>
+    <SourceLine classname="com.orderProcessing.OrderProcessingService" start="31" end="31" startBytecode="64" endBytecode="64" sourcefile="OrderProcessingService.java" sourcepath="com/orderProcessing/OrderProcessingService.java"/>
+  </BugInstance>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" abbrev="ST" category="STYLE" first="1">
+    <Class classname="com.orderProcessing.OrderProcessingService">
+      <SourceLine classname="com.orderProcessing.OrderProcessingService" sourcefile="OrderProcessingService.java" sourcepath="com/orderProcessing/OrderProcessingService.java"/>
+    </Class>
+    <Method classname="com.orderProcessing.OrderProcessingService" name="addOrder" signature="([Ljava/lang/String;[I)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.orderProcessing.OrderProcessingService" start="23" end="45" startBytecode="0" endBytecode="476" sourcefile="OrderProcessingService.java" sourcepath="com/orderProcessing/OrderProcessingService.java"/>
+    </Method>
+    <Field classname="com.orderProcessing.OrderProcessingService" name="order" signature="Lcom/orderProcessing/Order;" isStatic="true">
+      <SourceLine classname="com.orderProcessing.OrderProcessingService" sourcefile="OrderProcessingService.java" sourcepath="com/orderProcessing/OrderProcessingService.java"/>
+    </Field>
+    <SourceLine classname="com.orderProcessing.OrderProcessingService" start="36" end="36" startBytecode="116" endBytecode="116" sourcefile="OrderProcessingService.java" sourcepath="com/orderProcessing/OrderProcessingService.java"/>
+    <SourceLine classname="com.orderProcessing.OrderProcessingService" start="36" end="36" startBytecode="116" endBytecode="116" sourcefile="OrderProcessingService.java" sourcepath="com/orderProcessing/OrderProcessingService.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N" first="1">
+    <Class classname="com.orderprocessing.client.Client">
+      <SourceLine classname="com.orderprocessing.client.Client" sourcefile="Client.java" sourcepath="com/orderprocessing/client/Client.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.Client" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.Client" start="13" end="126" startBytecode="0" endBytecode="1683" sourcefile="Client.java" sourcepath="com/orderprocessing/client/Client.java"/>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="608" end="609" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+    </Method>
+    <SourceLine classname="com.orderprocessing.client.Client" start="57" end="57" startBytecode="447" endBytecode="447" sourcefile="Client.java" sourcepath="com/orderprocessing/client/Client.java"/>
+    <SourceLine classname="com.orderprocessing.client.Client" start="57" end="57" startBytecode="447" endBytecode="447" sourcefile="Client.java" sourcepath="com/orderprocessing/client/Client.java"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub" name="addOrder" signature="(Lcom/orderprocessing/client/OrderProcessingServiceStub$AddOrder;)Lcom/orderprocessing/client/OrderProcessingServiceStub$AddOrderResponse;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="1050" end="1161" startBytecode="0" endBytecode="1289" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="_messageContext" register="2" pc="2" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="1158" end="1158" startBytecode="478" endBytecode="478" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="1050" end="1050" startBytecode="0" endBytecode="0" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="1052" end="1052" startBytecode="3" endBytecode="3" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub" name="addProduct" signature="(Lcom/orderprocessing/client/OrderProcessingServiceStub$AddProduct;)Lcom/orderprocessing/client/OrderProcessingServiceStub$AddProductResponse;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="472" end="583" startBytecode="0" endBytecode="1289" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="_messageContext" register="2" pc="2" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="580" end="580" startBytecode="478" endBytecode="478" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="472" end="472" startBytecode="0" endBytecode="0" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="474" end="474" startBytecode="3" endBytecode="3" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub" name="viewOrder" signature="(Lcom/orderprocessing/client/OrderProcessingServiceStub$ViewOrder;)Lcom/orderprocessing/client/OrderProcessingServiceStub$ViewOrderResponse;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="183" end="294" startBytecode="0" endBytecode="1289" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="_messageContext" register="2" pc="2" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="291" end="291" startBytecode="478" endBytecode="478" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="183" end="183" startBytecode="0" endBytecode="0" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="185" end="185" startBytecode="3" endBytecode="3" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_EXCEPTION" priority="2" abbrev="NP" category="CORRECTNESS" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub" name="viewProduct" signature="(Lcom/orderprocessing/client/OrderProcessingServiceStub$ViewProduct;)Lcom/orderprocessing/client/OrderProcessingServiceStub$ViewProductResponse;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="761" end="872" startBytecode="0" endBytecode="1289" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="_messageContext" register="2" pc="2" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="869" end="869" startBytecode="478" endBytecode="478" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_DEREF"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="761" end="761" startBytecode="0" endBytecode="0" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_NULL_VALUE"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="763" end="763" startBytecode="3" endBytecode="3" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java" role="SOURCE_LINE_KNOWN_NULL"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.DEREFS_ARE_CLONED" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DoomedCodeWarningProperty.DOOMED_CODE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.LONG_RANGE_NULL_SOURCE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.NullDerefProperty.ALWAYS_ON_EXCEPTION_PATH" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub" name="toEnvelope" signature="(Lorg/apache/axiom/soap/SOAPFactory;)Lorg/apache/axiom/soap/SOAPEnvelope;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" start="6094" end="6094" startBytecode="0" endBytecode="58" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="UWF_NULL_FIELD" priority="2" abbrev="UwF" category="CORRECTNESS" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Field classname="com.orderprocessing.client.OrderProcessingServiceStub" name="opNameArray" signature="[Ljavax/xml/namespace/QName;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="getItemList" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1831" end="1831" startBytecode="0" endBytecode="46" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <Field classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="localItemList" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Field>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1831" end="1831" startBytecode="4" endBytecode="4" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1831" end="1831" startBytecode="4" endBytecode="4" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="getItemQtyList" signature="()[I" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1911" end="1911" startBytecode="0" endBytecode="46" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <Field classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="localItemQtyList" signature="[I" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Field>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1911" end="1911" startBytecode="4" endBytecode="4" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1911" end="1911" startBytecode="4" endBytecode="4" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="setItemList" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1853" end="1858" startBytecode="0" endBytecode="79" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <Field classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="localItemList" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Field>
+    <LocalVariable name="param" register="1" pc="12" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1857" end="1857" startBytecode="12" endBytecode="12" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1857" end="1857" startBytecode="12" endBytecode="12" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="setItemQtyList" signature="([I)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1933" end="1938" startBytecode="0" endBytecode="116" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <Field classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="localItemQtyList" signature="[I" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Field>
+    <LocalVariable name="param" register="1" pc="20" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1937" end="1937" startBytecode="20" endBytecode="20" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="1937" end="1937" startBytecode="20" endBytecode="20" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" start="2115" end="2121" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$AddOrder;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder$Factory" start="2321" end="2493" startBytecode="0" endBytecode="326" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder$Factory" start="2363" end="2363" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder$Factory" start="2363" end="2363" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse" start="3567" end="3573" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$AddOrderResponse;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse$Factory" start="3734" end="3825" startBytecode="0" endBytecode="163" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse$Factory" start="3776" end="3776" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse$Factory" start="3776" end="3776" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct" start="4746" end="4752" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$AddProduct;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct$Factory" start="4914" end="5001" startBytecode="0" endBytecode="166" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct$Factory" start="4956" end="4956" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct$Factory" start="4956" end="4956" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse" start="5627" end="5633" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$AddProductResponse;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse$Factory" start="5795" end="5882" startBytecode="0" endBytecode="166" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse$Factory" start="5837" end="5837" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse$Factory" start="5837" end="5837" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$Product">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$Product" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$Product" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$Product" start="4209" end="4215" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$Product$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$Product$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$Product$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$Product;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$Product$Factory" start="4394" end="4563" startBytecode="0" endBytecode="325" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$Product$Factory" start="4436" end="4436" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$Product$Factory" start="4436" end="4436" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder" start="1530" end="1536" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$ViewOrder;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder$Factory" start="1697" end="1786" startBytecode="0" endBytecode="168" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder$Factory" start="1739" end="1739" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder$Factory" start="1739" end="1739" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse" start="5188" end="5194" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$ViewOrderResponse;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse$Factory" start="5355" end="5444" startBytecode="0" endBytecode="168" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse$Factory" start="5397" end="5397" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse$Factory" start="5397" end="5397" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct" start="2682" end="2688" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$ViewProduct;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct$Factory" start="2849" end="2940" startBytecode="0" endBytecode="163" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct$Factory" start="2891" end="2891" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct$Factory" start="2891" end="2891" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <BugInstance type="UPM_UNCALLED_PRIVATE_METHOD" priority="2" abbrev="UPM" category="PERFORMANCE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse" name="writeAttribute" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljavax/xml/stream/XMLStreamWriter;)V" isStatic="false">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse" start="3123" end="3129" startBytecode="0" endBytecode="151" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse$Factory">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse$Factory" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Class>
+    <Method classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse$Factory" name="parse" signature="(Ljavax/xml/stream/XMLStreamReader;)Lcom/orderprocessing/client/OrderProcessingServiceStub$ViewProductResponse;" isStatic="true">
+      <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse$Factory" start="3291" end="3378" startBytecode="0" endBytecode="166" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    </Method>
+    <LocalVariable name="handledAttributes" register="6" pc="181" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse$Factory" start="3333" end="3333" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <SourceLine classname="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse$Factory" start="3333" end="3333" startBytecode="179" endBytecode="179" sourcefile="OrderProcessingServiceStub.java" sourcepath="com/orderprocessing/client/OrderProcessingServiceStub.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="handledAttributes"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 29 Jun 2014 14:09:08 +0530" total_classes="29" referenced_classes="113" total_bugs="31" total_size="3025" num_packages="2" vm_version="24.51-b03" cpu_seconds="15.70" clock_seconds="5.36" peak_mbytes="384.56" alloc_mbytes="455.00" gc_seconds="0.76" priority_2="30" priority_1="1">
+    <PackageStats package="com.orderProcessing" total_bugs="2" total_types="3" total_size="92" priority_2="2">
+      <ClassStats class="com.orderProcessing.Order" sourceFile="Order.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.orderProcessing.OrderProcessingService" sourceFile="OrderProcessingService.java" interface="false" size="36" bugs="2" priority_2="2"/>
+      <ClassStats class="com.orderProcessing.Product" sourceFile="Product.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.orderprocessing.client" total_bugs="29" total_types="26" total_size="2933" priority_2="28" priority_1="1">
+      <ClassStats class="com.orderprocessing.client.Client" sourceFile="Client.java" interface="false" size="90" bugs="1" priority_1="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceCallbackHandler" sourceFile="OrderProcessingServiceCallbackHandler.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub" sourceFile="OrderProcessingServiceStub.java" interface="false" size="533" bugs="6" priority_2="6"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$1" sourceFile="OrderProcessingServiceStub.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$2" sourceFile="OrderProcessingServiceStub.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$3" sourceFile="OrderProcessingServiceStub.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$4" sourceFile="OrderProcessingServiceStub.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder" sourceFile="OrderProcessingServiceStub.java" interface="false" size="225" bugs="5" priority_2="5"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$AddOrder$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="84" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse" sourceFile="OrderProcessingServiceStub.java" interface="false" size="158" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$AddOrderResponse$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="43" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct" sourceFile="OrderProcessingServiceStub.java" interface="false" size="158" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$AddProduct$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="43" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse" sourceFile="OrderProcessingServiceStub.java" interface="false" size="158" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$AddProductResponse$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="43" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ExtensionMapper" sourceFile="OrderProcessingServiceStub.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$Product" sourceFile="OrderProcessingServiceStub.java" interface="false" size="224" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$Product$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="76" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder" sourceFile="OrderProcessingServiceStub.java" interface="false" size="158" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrder$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse" sourceFile="OrderProcessingServiceStub.java" interface="false" size="158" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ViewOrderResponse$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="44" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct" sourceFile="OrderProcessingServiceStub.java" interface="false" size="158" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ViewProduct$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="43" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse" sourceFile="OrderProcessingServiceStub.java" interface="false" size="158" bugs="1" priority_2="1"/>
+      <ClassStats class="com.orderprocessing.client.OrderProcessingServiceStub$ViewProductResponse$Factory" sourceFile="OrderProcessingServiceStub.java" interface="false" size="43" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="640" invocations="758" avgMicrosecondsPerInvocation="844" maxMicrosecondsPerInvocation="25047" standardDeviationMircosecondsPerInvocation="1825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.RuntimeExceptionCapture" totalMilliseconds="564" invocations="29" avgMicrosecondsPerInvocation="19478" maxMicrosecondsPerInvocation="543298" standardDeviationMircosecondsPerInvocation="98995"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="290" invocations="318" avgMicrosecondsPerInvocation="913" maxMicrosecondsPerInvocation="10430" standardDeviationMircosecondsPerInvocation="1743"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="271" invocations="281" avgMicrosecondsPerInvocation="965" maxMicrosecondsPerInvocation="13589" standardDeviationMircosecondsPerInvocation="1919"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="255" invocations="281" avgMicrosecondsPerInvocation="907" maxMicrosecondsPerInvocation="16118" standardDeviationMircosecondsPerInvocation="1772"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="242" invocations="319" avgMicrosecondsPerInvocation="760" maxMicrosecondsPerInvocation="31072" standardDeviationMircosecondsPerInvocation="2090"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="232" invocations="2" avgMicrosecondsPerInvocation="116302" maxMicrosecondsPerInvocation="166976" standardDeviationMircosecondsPerInvocation="50674"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="190" invocations="761" avgMicrosecondsPerInvocation="250" maxMicrosecondsPerInvocation="28163" standardDeviationMircosecondsPerInvocation="1021"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="171" invocations="281" avgMicrosecondsPerInvocation="609" maxMicrosecondsPerInvocation="11772" standardDeviationMircosecondsPerInvocation="1302"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="149" invocations="113" avgMicrosecondsPerInvocation="1319" maxMicrosecondsPerInvocation="16974" standardDeviationMircosecondsPerInvocation="2306"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="145" invocations="216" avgMicrosecondsPerInvocation="674" maxMicrosecondsPerInvocation="11689" standardDeviationMircosecondsPerInvocation="1393"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="137" invocations="505" avgMicrosecondsPerInvocation="272" maxMicrosecondsPerInvocation="8598" standardDeviationMircosecondsPerInvocation="553"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="114" invocations="281" avgMicrosecondsPerInvocation="406" maxMicrosecondsPerInvocation="4223" standardDeviationMircosecondsPerInvocation="641"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindOpenStream" totalMilliseconds="78" invocations="29" avgMicrosecondsPerInvocation="2696" maxMicrosecondsPerInvocation="35065" standardDeviationMircosecondsPerInvocation="6494"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="71" invocations="25" avgMicrosecondsPerInvocation="2870" maxMicrosecondsPerInvocation="3594" standardDeviationMircosecondsPerInvocation="757"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.LoadOfKnownNullValue" totalMilliseconds="67" invocations="29" avgMicrosecondsPerInvocation="2342" maxMicrosecondsPerInvocation="24549" standardDeviationMircosecondsPerInvocation="4335"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="57" invocations="113" avgMicrosecondsPerInvocation="505" maxMicrosecondsPerInvocation="3362" standardDeviationMircosecondsPerInvocation="716"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindInconsistentSync2" totalMilliseconds="56" invocations="29" avgMicrosecondsPerInvocation="1947" maxMicrosecondsPerInvocation="28439" standardDeviationMircosecondsPerInvocation="5151"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DefaultEncodingDetector" totalMilliseconds="52" invocations="29" avgMicrosecondsPerInvocation="1821" maxMicrosecondsPerInvocation="13702" standardDeviationMircosecondsPerInvocation="2566"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.DumbMethods" totalMilliseconds="49" invocations="29" avgMicrosecondsPerInvocation="1702" maxMicrosecondsPerInvocation="11211" standardDeviationMircosecondsPerInvocation="1946"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="48" invocations="281" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="4453" standardDeviationMircosecondsPerInvocation="383"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.TypeQualifierNullnessAnnotationDatabase" totalMilliseconds="44" invocations="8146" avgMicrosecondsPerInvocation="5" maxMicrosecondsPerInvocation="336" standardDeviationMircosecondsPerInvocation="16"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUseOfNonSerializableValue" totalMilliseconds="43" invocations="29" avgMicrosecondsPerInvocation="1495" maxMicrosecondsPerInvocation="26642" standardDeviationMircosecondsPerInvocation="4780"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1404367354412" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

@@ -1,0 +1,12 @@
+package com.ffms.xml;
+
+public class student {
+
+	public static void main(String[] args) {
+		private String academicYear=null;
+		
+		
+
+	}
+
+}

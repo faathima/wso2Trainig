@@ -1,0 +1,9 @@
+package com.jaxRs;
+
+import javax.ws.rs.*;
+
+@Path("/")
+public class hello {
+
+
+}

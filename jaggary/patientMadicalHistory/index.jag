@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<%
+var json = require("patient.json");
+%>
+</head>
+<body>
+	<h1>Patient Details</h1>
+	<%
+	include ("new_patient.jag");
+	%>
+	<h2>List all Patient</h2>
+	<table "patientTable" align="center" border="2">
+		<tr>
+			<th>Hospital</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Diagnosis</th>
+
+		</tr>
+		<%
+		for (var i in json.patient){
+%>
+		<tr>
+			<td><%=json.patient[i].Hospital%></td>
+			<td><%=json.patient[i].Name%></td>
+			<td><%=json.patient[i].Age%></td>
+			<td><%=json.patient[i].Diagnosis%></td>
+		</tr>
+		<%
+}
+
+%>
+
+	</table>
+</body>
+
+</html>

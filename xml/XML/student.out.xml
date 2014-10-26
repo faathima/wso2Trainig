@@ -1,0 +1,10 @@
+<html>
+<body>
+<h2>Student Details Batch-11</h2>
+<table border="1">
+<tr bgcolor="#9acd32">
+<th style="text-align:left">Name</th><th style="text-align:left">Reg_No</th><th style="text-align:left">Course</th><th style="text-align:left">Phone</th><th style="text-align:left">email</th>
+</tr>
+</table>
+</body>
+</html>

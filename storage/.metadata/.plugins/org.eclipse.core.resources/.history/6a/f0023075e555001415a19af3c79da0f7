@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:ns1="http://org.apache.axis2/xsd"
+                  xmlns:ns="http://com.carbon.wso2.org"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  targetNamespace="http://com.carbon.wso2.org">
+   <wsdl:types>
+      <xs:schema attributeFormDefault="qualified"
+                 elementFormDefault="qualified"
+                 targetNamespace="http://com.carbon.wso2.org">
+         <xs:element name="A">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element minOccurs="0" name="ffms" nillable="true" type="xs:string"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:schema>
+   </wsdl:types>
+   <wsdl:message name="ARequest">
+      <wsdl:part name="parameters" element="ns:A"/>
+   </wsdl:message>
+   <wsdl:portType name="workflowPortType">
+      <wsdl:operation name="A">
+         <wsdl:input message="ns:ARequest" wsaw:Action="urn:A"/>
+      </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="workflowSoap11Binding" type="ns:workflowPortType">
+      <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+      <wsdl:operation name="A">
+         <soap:operation soapAction="urn:A" style="document"/>
+         <wsdl:input>
+            <soap:body use="literal"/>
+         </wsdl:input>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:binding name="workflowSoap12Binding" type="ns:workflowPortType">
+      <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+      <wsdl:operation name="A">
+         <soap12:operation soapAction="urn:A" style="document"/>
+         <wsdl:input>
+            <soap12:body use="literal"/>
+         </wsdl:input>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:binding name="workflowHttpBinding" type="ns:workflowPortType">
+      <http:binding verb="POST"/>
+      <wsdl:operation name="A">
+         <http:operation location="A"/>
+         <wsdl:input>
+            <mime:content type="text/xml" part="parameters"/>
+         </wsdl:input>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="workflow">
+      <wsdl:port name="workflowHttpSoap11Endpoint" binding="ns:workflowSoap11Binding">
+         <soap:address location="http://localhost:8080/axis2/services/workflow"/>
+      </wsdl:port>
+      <wsdl:port name="workflowHttpSoap12Endpoint" binding="ns:workflowSoap12Binding">
+         <soap12:address location="http://localhost:8080/axis2/services/workflow"/>
+      </wsdl:port>
+      <wsdl:port name="workflowHttpEndpoint" binding="ns:workflowHttpBinding">
+         <http:address location="http://localhost:8080/axis2/services/workflow"/>
+      </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,31 @@
+package com.ws.rest;
+import javax.ws.rs.*;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
+@Path("/university")
+public class university {
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String getHTMLUniversityInfo(){
+		
+		return "<html>"+"<title>"+"unversity information"+"</title>"+"<body>"+
+		"<h1>"+"Name-SL Universities"+"</h1>"+"</body>"+"</html>";	
+		
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getXMLUniversityInfo(){
+		
+		return 	"Name-SL Universities";
+		
+	}
+	
+	@PUT
+	@Path("{studentRollNo}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String updateUniversityInfo(@PathParam("studentRollNo")String studentRollNo){
+		return "Done Successfull";
+	}
+
+}

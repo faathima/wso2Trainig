@@ -1,0 +1,47 @@
+package callback.workflow.ss.carbon.wso2.org;
+import org.apache.axiom.om.util.AXIOMUtil;
+import org.apache.axis2.AxisFault;
+import org.apache.axis2.Constants;
+import org.apache.axis2.addressing.EndpointReference;
+import org.apache.axis2.client.Options;
+import org.apache.axis2.client.ServiceClient;
+import org.apache.axis2.transport.http.HTTPConstants;
+
+public class WorkflowCallbackService{
+	
+public void resumeEvent(String workflowReference,String status, String description ){
+	
+	System.out.println("ffms axis2 service for call back");
+	String serviceEndpoint = null;
+	String contentType=null;
+	try{
+	ServiceClient client=new ServiceClient();
+	
+     Options options = new Options();
+     options.setAction("");
+     options.setTo(new EndpointReference(serviceEndpoint));
+
+    
+     client.setOptions(options);
+
+     String payload =
+             "<wor:CreateDBApprovalWorkFlowProcessRequest xmlns:wor=\"http://workflow.createdb.ss.carbon.wso2.org\">\n"
+                     + "        <wor:DatabaseName>$1</wor:DatabaseName>\n"
+
+                     +"</wor:CreateDBApprovalWorkFlowProcessRequest>";
+    
+
+     payload = payload.replace("$1",contentType);
+  
+     client.fireAndForget(AXIOMUtil.stringToOM(payload));
+
+ } catch (AxisFault axisFault) {
+     axisFault.printStackTrace();
+
+ } catch (Exception e) {
+     e.printStackTrace();
+
+ }
+	}
+
+}

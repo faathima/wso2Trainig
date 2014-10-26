@@ -1,0 +1,9 @@
+package test;
+
+public class test {
+public int add(int c){
+		return c;
+		
+	}
+
+}

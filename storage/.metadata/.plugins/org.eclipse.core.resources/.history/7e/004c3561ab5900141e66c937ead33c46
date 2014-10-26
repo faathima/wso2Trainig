@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//src/callback/workflow/ss/carbon/wso2/org/WorkflowCallbackService.java=UTF-8
+encoding//src/callback/workflow/ss/carbon/wso2/org/WorkflowCallbackServicePortType.java=UTF-8
+encoding//src/callback/workflow/ss/carbon/wso2/org/WorkflowCallbackServiceSoap11BindingStub.java=UTF-8

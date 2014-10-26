@@ -1,0 +1,11 @@
+package org.wso2.carbon.core.services.echo;
+
+public class client {
+	public static void main(String [] args){
+		EchoStub echo = new EchoStub();
+		echo.echoInt(echoInt);
+		
+		
+	}
+
+}

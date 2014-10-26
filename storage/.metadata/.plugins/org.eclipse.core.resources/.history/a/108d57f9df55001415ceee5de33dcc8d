@@ -1,0 +1,16 @@
+package org.wso2.carbon.com;
+
+
+public class workflow{
+	
+	                public void resumeEvent(String workflowReference, String status, String description) {
+	                               
+	                }
+
+	                public String resumeEventResponse(String response) {
+	                              return response;
+	                }
+	                
+	                
+
+}

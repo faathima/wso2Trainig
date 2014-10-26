@@ -1,0 +1,65 @@
+package org.wso2.carbon.orderprocessing.mgt.ui;
+
+import org.apache.axis2.client.Options;
+import org.apache.axis2.client.ServiceClient;
+import org.apache.axis2.context.ConfigurationContext;
+import org.wso2.carbon.orderprocessing.mgt.ViewProduct;
+import org.wso2.carbon.orderprocessing.mgt.data.xsd.Product;
+import org.wso2.carbon.orderprocessing.mgt.stub.*;
+
+import java.rmi.RemoteException;
+
+public class Client {
+	private OrderProcessingStub stub;
+
+	public Client(ConfigurationContext configCtx, String backendServerURL,
+			String cookie) throws Exception {
+		String serviceURL = backendServerURL + "OrderProcessing";
+		stub = new OrderProcessingStub(configCtx, serviceURL);
+		ServiceClient client = stub._getServiceClient();
+		Options options = client.getOptions();
+		options.setManageSession(true);
+		options.setProperty(
+				org.apache.axis2.transport.http.HTTPConstants.COOKIE_STRING,
+				cookie);
+	}
+
+	public void addproduct() throws Exception {
+		try {
+			Product product1 = new Product();
+			product1.setProductId(1);
+			product1.setProductName("iPad");
+			product1.setUnitPrice(50000);
+			product1.setQuantity(50);
+			stub.addProduct(product1);
+
+			Product product2 = new Product();
+			product2.setProductId(2);
+			product2.setProductName("laptop");
+			product2.setUnitPrice(40000);
+			product2.setQuantity(100);
+			stub.addProduct(product2);
+
+			Product product3 = new Product();
+			product3.setProductId(3);
+			product3.setProductName("smartphone");
+			product3.setUnitPrice(30000);
+			product3.setQuantity(2);
+			stub.addProduct(product2);
+		} catch (RemoteException e) {
+			String msg = "Cannot get the list of product";
+			throw new Exception(msg, e);
+		}
+
+	}
+
+	public Product ViewProduct() throws Exception {
+		try {
+			return stub.viewProduct("iPad");
+
+		} catch (RemoteException e) {
+			String msg = "Cannot get the list of product";
+			throw new Exception(msg, e);
+		}
+	}
+}

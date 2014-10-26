@@ -1,0 +1,51 @@
+package com.orderProcessing.service;
+import java.util.ArrayList;
+
+public class orderProcessingService {
+	private static ArrayList<Item> itemList;
+	public static String name;
+
+	//public orderProcessingService() {
+		//if (itemList == null) {
+			//itemList = new ArrayList<Item>();
+		//}
+	//}
+
+	// add items
+	public int addItem(Item item) {
+		item.setId(nextItemId());
+		itemList.add(item);
+		item.setName(name);
+
+		return item.getId();
+	}
+
+	private int nextItemId() {
+		return itemList.size() + 1;
+	}
+	
+	//view item added
+	public String viewItem(){
+		while(!itemList.isEmpty()){
+		System.out.println(itemList.toString());	 }
+		return itemList.toString();
+	}
+
+	// get order count
+	public int getItemCount() {
+		return itemList.size();
+	}
+
+	// get orders
+	public Item getItem(int ItemId) {
+		Item item = null;
+		for (int i = 0; i < itemList.size(); i++) {
+			if (itemList.get(i).getId() == ItemId) {
+				item = itemList.get(i);
+				break;
+			}
+		}
+		return item;
+	}
+
+}

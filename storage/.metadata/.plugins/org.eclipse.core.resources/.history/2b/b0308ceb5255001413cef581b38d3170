@@ -1,0 +1,22 @@
+package org.wso2.carbon.core.services.echo;
+
+import java.rmi.RemoteException;
+
+import org.apache.axis2.AxisFault;
+import org.wso2.carbon.core.services.echo.EchoStub.EchoInt;
+import org.wso2.carbon.core.services.echo.EchoStub.EchoIntResponse;
+
+public class client {
+	public static void main(String [] args) throws RemoteException{
+		EchoStub echo = new EchoStub();
+		
+		EchoInt i = new EchoInt();
+		EchoIntResponse r=echo.echoInt(i);
+		
+		System.out.print(r);
+		
+		
+		
+	}
+
+}

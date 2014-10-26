@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:student xmlns:tns="http://www.example.org/testSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/testSchema testSchema.xsd ">
+  <tns:name>ffms</tns:name>
+  <tns:regNo>1</tns:regNo>
+  <tns:course>IT</tns:course>
+</tns:student>

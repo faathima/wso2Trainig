@@ -1,0 +1,56 @@
+package com.orderProcessing;
+import java.util.HashMap;
+
+public class OrderProcessingService {
+
+		private HashMap<Integer, Order> map;
+
+		public OrderProcessingService() {
+			map = new HashMap<Integer, Order>();
+		}
+
+	
+		public boolean createOrder(Order order) {
+			int orderId = order.getOrderid();
+			if (!map.containsKey(orderId)) {
+				map.put(orderId, order);
+				return true;
+			}
+			return false;
+
+		}
+
+		public Order viewOrder(int orderId) {
+			Order order = null;
+			if (map.containsKey(orderId)) {
+				return (Order) map.get(orderId);
+			}
+			return order;
+		}
+
+		public float viewOrderCost(int orderId) {
+			float orderCost = -1;
+			OrderItem items[] = this.viewOrderItems(orderId);
+
+			if (!(items == null) && (items.length > 0)) {
+				orderCost = 0;
+				for (OrderItem item : items) // use for-each loop
+				{
+					orderCost += (item.getUnitPrice() * item.getQuantity());
+				}
+			}
+			return orderCost;
+
+		}
+
+		public OrderItem[] viewOrderItems(int orderId) {
+			OrderItem items[] = null;
+			if (map.containsKey(orderId)) {
+				Order order = (Order) map.get(orderId);
+				items = order.getItems();
+			}
+			return items;
+		}
+
+	}
+

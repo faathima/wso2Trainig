@@ -1,0 +1,33 @@
+package org.wso2.carbon.core.services.echo;
+
+import java.rmi.RemoteException;
+
+import org.apache.axis2.AxisFault;
+import org.wso2.carbon.core.services.echo.EchoStub.EchoInt;
+import org.wso2.carbon.core.services.echo.EchoStub.EchoIntResponse;
+
+public class client {
+	public static void main(String [] args) throws RemoteException{
+		EchoStub echo = new EchoStub();
+		
+		EchoStub.EchoInt i = new EchoStub.EchoInt();
+		i.setIn(1);
+		
+		EchoIntResponse r=echo.echoInt(i);
+		
+		System.out.print(r);
+		
+//		//Create the request
+//        SimpleServiceStub.Echo request = new SimpleServiceStub.Echo();
+//        request.setParam0("Hello world");
+// 
+//        //Invoke the service.
+//        EchoResponse response = stub.echo(request);
+// 
+//        System.out.println("Response : " + response.get_return());
+		
+		
+		
+	}
+
+}

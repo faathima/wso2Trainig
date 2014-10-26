@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.axis2.context.ConfigurationContext"/>
+<fullyQualifiedTypeName name="org.apache.axis2.context.ConfigurationContextFactory"/>
+<fullyQualifiedTypeName name="org.wso2.carbon.humantask.core.engine.util.CommonTaskUtil"/>
+<fullyQualifiedTypeName name="org.wso2.carbon.humantask.core.HumanTaskConstants"/>
+</qualifiedTypeNameHistroy>

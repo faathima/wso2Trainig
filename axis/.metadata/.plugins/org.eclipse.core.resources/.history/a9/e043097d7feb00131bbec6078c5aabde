@@ -1,0 +1,69 @@
+package com.orderprocessing.service;
+import java.util.ArrayList;
+import java.util.HashMap;
+public class orderProcessingService {
+	
+		static ArrayList<item> itemLsit = new ArrayList<item>();
+		static ArrayList<order> orderList = new ArrayList<order>();
+
+		public item addItem(item item){
+			boolean exist=false;
+			for(item singleItem:itemLsit){
+				if(singleItem.getId()==item.getId()){
+					exist=true;
+				}  
+			}
+			if(!exist){
+				itemLsit.add(item);
+			}
+			return itemLsit.get(0);
+		}
+
+		public item viewItem(int itemId) {
+			item item = new item();
+			for (item singleItem : itemLsit) {
+				if (singleItem.getId() == itemId) {
+					item = singleItem;
+				}
+			}
+			return item;
+		}
+
+		public int getPrice(int[] itemList,int[] qtyList) {
+			int price = 0;
+			for (int i=0;i<itemList.length;i++) {
+				for (item singleItem : inventory) {
+					if (singleItem.getId() == itemList[i]) {
+						price += (singleItem.getPrice()*qtyList[i]);
+					}
+				}
+			}
+			return price;
+		}
+
+		public int[] addOrder(int[] itemList, int[] qtyList) {
+			order order = new order();
+			HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+			for (int i = 0; i < itemList.length; i++) {
+				hm.put(itemList[i], qtyList[i]);
+			}
+			int id = 0;
+			for (order singleOrder : orderList) {
+				if (id < singleOrder.getOrderID()) {
+					id = singleOrder.getOrderID();
+				}
+
+			}
+			id++;
+			order.setOrderID(id);
+			order.setItemList(hm);
+			orderList.add(order);
+			int [] output=new int[2];
+			output[0]=id;
+			output[1]=getPrice(itemList,qtyList);
+			return output;
+		}
+
+	}
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+<course>
+<id>1</id>
+<name>db</name>
+</course>
+<course>
+<id>2</id>
+<name>java</name>
+</course>
+</courses>

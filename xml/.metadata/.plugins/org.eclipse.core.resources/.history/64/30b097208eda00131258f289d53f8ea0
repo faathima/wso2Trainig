@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channe name="java">
+<tutorial>intro</tutorial>
+<tutorial>RMI</tutorial>
+<tutorial>socket</tutorial>
+</channe>

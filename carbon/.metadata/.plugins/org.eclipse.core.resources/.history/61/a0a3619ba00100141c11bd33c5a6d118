@@ -1,0 +1,88 @@
+package org.wso2.carbon.orderprocessing.ui;
+
+import java.rmi.RemoteException;
+
+import org.apache.axis2.client.Options;
+import org.apache.axis2.client.ServiceClient;
+import org.apache.axis2.context.ConfigurationContext;
+import org.wso2.carbon.orderprocessing.*;
+
+public class Client {
+	private OrderProcessingStub orderProcessStub;
+	private static OrderProcessClient orderProcessClient;
+	 String serviceURL="none";
+	 
+	 public static OrderProcessClient getOrderProcessClient() throws Exception{
+	       
+	        	return orderProcessClient;
+	        	
+	       
+	    }
+	 
+	 
+    public OrderProcessClient(ConfigurationContext configCtx, String backendServerURL, String cookie) throws Exception{
+        serviceURL = backendServerURL + "orderProcess";
+        orderProcessStub = new OrderProcessStub(configCtx, serviceURL);
+        ServiceClient client = orderProcessStub._getServiceClient();
+        Options options = client.getOptions();
+        options.setManageSession(true);
+        options.setProperty(org.apache.axis2.transport.http.HTTPConstants.COOKIE_STRING, cookie);
+        orderProcessClient=this;
+    }
+    public void addItem() throws Exception{
+        try{
+        	Item item=new Item();
+        	item.setId(1);
+        	item.setName("Car");
+        	item.setPrice(50000);
+        	item.setDescription("Corolla car");
+        	Item item2=new Item();
+        	item2.setId(2);
+        	item2.setName("Van");
+        	item2.setPrice(100000);
+        	item2.setDescription("Hiace van");
+        	Item item3=new Item();
+        	item3.setId(3);
+        	item3.setName("Bus");
+        	item3.setPrice(100000);
+        	item3.setDescription("Rosa bus");
+        	orderProcessStub.addItem(item);
+        	orderProcessStub.addItem(item2);
+        	orderProcessStub.addItem(item3);
+        }catch (RemoteException e) {
+            String msg = "Cannot get the list of items"
+                    + " . Backend service which is "+serviceURL+" may be unavailable";
+            throw new Exception(msg, e);
+        }
+    }
+ 
+    public Item getItem() throws Exception{
+        try{
+            return orderProcessStub.viewItem(1);
+        }catch (RemoteException e) {
+            String msg = "Cannot get the list of items"
+                    + " . Backend service may be unavailable";
+            throw new Exception(msg, e);
+        }
+    }
+    
+    public Item[] getAllItems() throws Exception{
+        try{
+            return orderProcessStub.viewInventory(1);
+        }catch (RemoteException e) {
+            String msg = "Cannot get the list of items"
+                    + " . Backend service may be unavailable";
+            throw new Exception(msg, e);
+        }
+    }
+    
+    public int[] addOrder(int[] itemList,int[] qtyList) throws Exception{
+        try{
+        	return orderProcessStub.addOrder(itemList, qtyList);
+        }catch (RemoteException e) {
+            String msg = "Cannot get the list of items"
+                    + " . Backend service may be unavailable";
+            throw new Exception(msg, e);
+        }
+    }
+}

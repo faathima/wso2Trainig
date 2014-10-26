@@ -1,0 +1,79 @@
+!SESSION 2014-09-15 08:41:02.858 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.515
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.520
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.521
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.521
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.521
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.521
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.522
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.522
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.522
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.523
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.523
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.523
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.523
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.524
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.524
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.524
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.525
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.525
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.525
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.525
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.526
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.526
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-09-15 08:41:49.526
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.browser 2 0 2014-09-15 08:41:53.673
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]

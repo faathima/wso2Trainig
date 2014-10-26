@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry exported="true" kind="var" path="ECLIPSE_WORKSPACE/.metadata/.plugins/org.wso2.developerstudio.eclipse.libraries/lib/axis2_1.6.1.wso2v6.jar"/>
+	<classpathentry exported="true" kind="var" path="ECLIPSE_WORKSPACE/.metadata/.plugins/org.wso2.developerstudio.eclipse.libraries/lib/axiom_1.2.11.wso2v3.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Desktop/StorageServer/product-ss/modules/distribution/target/wso2ss-1.5.0-SNAPSHOT/repository/components/plugins/org.wso2.securevault_1.0.0.wso2v2.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/axis-wsdl4j-1.5.1.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/myPro/storage/Webapp/WebContent/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/httpcore-4.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/neethi-2.0.4.jar"/>
+	<classpathentry kind="lib" path="/home/msffayaza/Downloads/XmlSchema-1.4.7.jar(1)/XmlSchema-1.4.7.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

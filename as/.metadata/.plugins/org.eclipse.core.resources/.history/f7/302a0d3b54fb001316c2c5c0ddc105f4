@@ -1,0 +1,42 @@
+package com.jaxRs;
+
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.api.client.config.ClientConfig;
+import com.sun.jersey.api.client.config.DefaultClientConfig;
+import com.sun.org.apache.xerces.internal.util.URI;
+
+public class client {
+	private static String SERVICE_URL = "http://10.100.4.100:9763/JAX-RS_1.0.0/1.0/services/hello";
+
+	public static void main(String args[]) throws Exception {
+		
+		 Client client = ClientBuilder.newClient();
+		   Response res = client.target(SERVICE_URL).request("text/plain").get();
+		 
+		//Client client = ClientFactory.newClient();
+		//client.configuration().register(MoneyMBR.class);
+		/*ClientConfig config = new DefaultClientConfig();
+		Client client = Client.create(config);
+		WebResource service = client.resource(getBaseURI());
+		// Fluent interfaces
+		System.out.println(service.path("rest").path("hello")
+				.accept(MediaType.TEXT_PLAIN).get(ClientResponse.class)
+				.toString());
+		System.out.println(service.path("rest").path("hello")
+				.accept(MediaType.TEXT_PLAIN).get(String.class));
+
+	}
+
+	private static java.net.URI getBaseURI() {
+		return UriBuilder
+				.fromUri(
+						"http://10.100.4.100:9763/JAX-RS_1.0.0/1.0/services/hello/hello")
+				.build();
+	}*/
+	}}

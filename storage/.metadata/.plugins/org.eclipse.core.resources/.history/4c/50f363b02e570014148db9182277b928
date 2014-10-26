@@ -1,0 +1,78 @@
+package callback.workflow.ss.carbon.wso2.org;
+import org.apache.axiom.om.util.AXIOMUtil;
+import org.apache.axis2.AxisFault;
+import org.apache.axis2.Constants;
+import org.apache.axis2.addressing.EndpointReference;
+import org.apache.axis2.client.Options;
+import org.apache.axis2.client.ServiceClient;
+import org.apache.axis2.transport.http.HTTPConstants;
+
+public class WorkflowCallbackService{
+public String resumeEvent(String workflowReference,String status, String description ){
+	String serviceEndpoint = null;
+	String contentType=null;
+	try{
+	ServiceClient client=new ServiceClient();
+	
+     Options options = new Options();
+     options.setAction("http://workflow.createdb.ss.carbon.wso2.org/initiate");
+     options.setTo(new EndpointReference(serviceEndpoint));
+
+     if (contentType != null) {
+         options.setProperty(Constants.Configuration.MESSAGE_TYPE, contentType);
+     } else {
+         options.setProperty(Constants.Configuration.MESSAGE_TYPE,
+                 HTTPConstants.MEDIA_TYPE_APPLICATION_XML);
+     }
+
+  
+
+     System.out.println( client.getAxisConfiguration().toString());
+     System.out.println(client.getOptions().toString());
+
+
+
+     client.setOptions(options);
+
+     String payload =
+             "<wor:CreateDBApprovalWorkFlowProcessRequest xmlns:wor=\"http://workflow.createdb.ss.carbon.wso2.org\">\n"
+                     + "        <wor:DatabaseName>$1</wor:DatabaseName>\n"
+
+                     +"</wor:CreateDBApprovalWorkFlowProcessRequest>";
+     /*
+       //  + "        <wor:DBSInstanceName>$2</wor:DBSInstanceName>\n"
+                     + "        <wor:Environment>$3</wor:Environment>\n"
+                     + "        <wor:description>$4</wor:description>\n"
+                     + "        <wor:workflowExternalRef>$5</wor:workflowExternalRef\n"
+                     + "        <wor:callBackURL>$6</wor:callBackURL>";*/
+
+
+     payload = payload.replace("$1",contentType);
+  //   payload = payload.replace("$2", workflowInfo.getDbSInstanceName());
+     /*
+             payload = payload.replace("$4", workflowInfo.getDescription());
+             payload = payload.replace("$5", workflowInfo.getWorkflowExternalReference());
+             payload = payload.replace("$6", workflowInfo.getCallbackURL());*/
+
+
+
+     client.fireAndForget(AXIOMUtil.stringToOM(payload));
+
+     System.out.println("*****");
+     System.out.println( client.getAxisConfiguration().toString());
+     System.out.println(client.getOptions().toString());
+
+ } catch (AxisFault axisFault) {
+     System.out.println("********AxisFault***********");
+     axisFault.printStackTrace();
+
+ } catch (Exception e) {
+     System.out.println("********Exception***********");
+     e.printStackTrace();
+
+ }
+		
+		return status;
+	}
+
+}

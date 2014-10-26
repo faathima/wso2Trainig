@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="DeleteDBApproval" targetNamespace="http://www.example.com/deletedb/"
+	xmlns:tns="http://www.example.com/deletedb/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tschema="http://www.example.com/deletedb/schema"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+
+	<wsdl:documentation>
+		Delet DataBase
+	</wsdl:documentation>
+
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.example.com/deletedb/schema"
+			xmlns:tns="http://www.example.com/deletedb/schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			elementFormDefault="qualified">
+
+			<xsd:element name="DeleteDBApprovalData" type="tns:DeleteDBApprovalDataType" />
+			<xsd:complexType name="DeleteDBApprovalDataType">
+				<xsd:sequence>
+					<xsd:element name="DB_Name" type="xsd:string" />
+					<xsd:element name="DB_ID" type="xsd:int" />
+					<xsd:element name="priority" type="xsd:int" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="DeleteDBApprovalNotificationData" type="tns:DeleteDBApprovalNotificationDataType" />
+			<xsd:complexType name="DeleteDBApprovalNotificationDataType">
+				<xsd:sequence>
+					<xsd:element name="DB_NAME" type="xsd:string" />
+					<xsd:element name="DB_ID" type="xsd:int" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="DeleteDBApprovalResponse" type="tns:DeleteDBApprovalResponseType"></xsd:element>
+			<xsd:complexType name="DeleteDBApprovalResponseType">
+        		<xsd:sequence>
+        			<xsd:element name="approved" type="xsd:boolean"></xsd:element>
+        		</xsd:sequence>
+        		</xsd:complexType>
+		
+		</xsd:schema>
+   	 </wsdl:types>
+
+	<wsdl:message name="DeleteDBApprovalRequest">
+		<wsdl:part name="DeleteDBApprovalRequest" element="tschema:DeleteDBApprovalData" />
+	</wsdl:message>
+
+	<wsdl:message name="DeleteDBApprovalResponse">
+		<wsdl:part name="DeleteDBApprovalResponse" element="tschema:DeleteDBApprovalResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="DeleteDBApprovalNotificationRequest">
+		<wsdl:part name="DeleteDBApprovalNotificationRequest" element="tschema:DeleteDBApprovalNotificationData" />
+	</wsdl:message>
+
+	<wsdl:portType name="DeleteDBApprovalHandlingPT">
+		<wsdl:operation name="approve">
+			<wsdl:input message="tns:DeleteDBApprovalRequest" />
+		</wsdl:operation>
+
+		<wsdl:operation name="escalate">
+			<wsdl:input message="tns:DeleteDBApprovalRequest" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:portType name="DeleteDBApprovalHandlingCallbackPT">
+		<wsdl:operation name="approvalResponse">
+			<wsdl:input message="tns:DeleteDBApprovalResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:portType name="DeleteDBApprovalReminderPT">
+		<wsdl:operation name="notify">
+			<wsdl:input message="tns:DeleteDBApprovalNotificationRequest" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="DeleteDBApprovalSoapBinding" type="tns:DeleteDBApprovalHandlingPT">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="approve">
+			<soap:operation soapAction="urn:approve" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" namespace="http://www.example.com/claims/" />
+			</wsdl:input>
+		</wsdl:operation>
+		<wsdl:operation name="escalate">
+			<soap:operation soapAction="urn:escalate" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:binding name="DeleteDBApprovalSoapBindingReminder" type="tns:DeleteDBApprovalReminderPT">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="notify">
+			<soap:operation soapAction="urn:notify" style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:binding name="DeleteDBApprovalSoapBindingCB" type="tns:DeleteDBApprovalHandlingCallbackPT">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="approvalResponse">
+			<soap:operation soapAction="urn:approvalResponse"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="DeleteDBApprovalService">
+		<wsdl:port name="ClaimPort" binding="tns:DeleteDBApprovalSoapBinding">
+			<soap:address location="http://localhost:9763/services/DeleteDBApprovalService" />
+		</wsdl:port>
+	</wsdl:service>
+	<wsdl:service name="DeleteDBApprovalReminderService">
+		<wsdl:port name="ClaimReminderPort" binding="tns:DeleteDBApprovalSoapBindingReminder">
+			<soap:address location="http://localhost:9763/services/DeleteDBApprovalReminderService" />
+		</wsdl:port>
+	</wsdl:service>
+	<wsdl:service name="DeleteDBApprovalServiceCB">
+		<wsdl:port name="ClaimPortCB" binding="tns:DeleteDBApprovalSoapBindingCB">
+			<soap:address location="http://localhost:9763/services/DeleteDBApprovalServiceCB" />
+		</wsdl:port>
+
+    </wsdl:service>
+
+</wsdl:definitions>

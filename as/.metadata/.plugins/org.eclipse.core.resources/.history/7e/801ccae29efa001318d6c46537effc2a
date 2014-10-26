@@ -1,0 +1,14 @@
+package com.jaxRs;
+
+import javax.ws.rs.*;
+
+@Path("/hello{username}")
+public class Hello {
+	@GET
+	@Produces("text/plain")
+	public String sayHello(@PathParam("username") String userName){
+		return "Hello userName...........";
+	
+
+
+}

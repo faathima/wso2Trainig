@@ -1,0 +1,25 @@
+{
+"patient": [
+{
+"Hospital": "Asiri",
+"Name": "Kasun",
+"Age": "25",
+"Diagnosis": "Viral Pharyngitis"
+
+},
+{
+"Hospital": "Durdans",
+"Name": "Sunil",
+"Age": "29",
+"Diagnosis": "pressure"
+},
+{
+"Hospital": "GoldenKey",
+"Name": "Rani",
+"Age": "32",
+"Diagnosis": "Bacterial Pharyngitis"
+}
+]
+ 
+ 
+}

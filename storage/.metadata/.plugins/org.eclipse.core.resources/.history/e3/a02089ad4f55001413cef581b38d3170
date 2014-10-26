@@ -1,0 +1,16 @@
+package org.wso2.carbon.core.services.echo;
+
+import org.apache.axis2.AxisFault;
+
+public class client {
+	public static void main(String [] args) throws AxisFault{
+		EchoStub echo = new EchoStub();
+		
+		echo._getServiceClient();
+		echo.echoString(null)
+		
+		
+		
+	}
+
+}

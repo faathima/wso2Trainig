@@ -1,0 +1,16 @@
+package com.esb;
+
+
+public class client {
+	public static void main(String[] args) throws Exception {
+	     Hello_WorldStub stub = new Hello_WorldStub();
+	    
+	     //Creating the request
+	     com.esb.Hello_WorldStub.SayHello  request = new  com.esb.Hello_WorldStub.SayHello();
+	     request.setName("fms");
+	   
+	     //Invoking the service
+	     com.esb.Hello_WorldStub.SayHelloResponse response  = stub.sayHello(request);
+	     System.out.println("Response : " + response.get_return());
+	    }
+}

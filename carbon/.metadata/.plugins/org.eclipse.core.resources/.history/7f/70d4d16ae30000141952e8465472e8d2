@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<serviceGroup>
+    <service name="StudentManager" scope="transportsession">
+        <transports>
+            <transport>https</transport>
+        </transports>
+        <parameter name="ServiceClass">org.wso2.carbon.student.mgt.StudentManager</parameter>
+    </service>
+ 
+    
+</serviceGroup>

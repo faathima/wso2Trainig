@@ -1,0 +1,22 @@
+package com.orderProcessing;
+import com.orderprocessing.OrderStub;
+
+public class client {
+
+		public static void main(String[] args) throws Exception {
+			OrderStub stub = new OrderStub();
+		    
+		     //Creating the request
+			com.orderprocessing.OrderStub.Total request = new  com.orderprocessing.OrderStub.Total();
+		    
+		   
+		     //Invoking the service
+		     com.orderprocessing.OrderStub.TotalResponse response  = stub.total(request);
+		     System.out.println("Response : " + response.get_return());
+		    }
+		
+
+	}
+
+
+

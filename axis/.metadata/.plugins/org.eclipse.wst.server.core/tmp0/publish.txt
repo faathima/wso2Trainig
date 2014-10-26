@@ -1,0 +1,10 @@
+#Tomcat publish data
+#Wed Jul 02 11:13:49 IST 2014
+org.eclipse.jst.jee.server\:Hello_World=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/Hello_World
+org.eclipse.jst.jee.server\:orderProcessing=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/orderProcessing
+org.eclipse.jst.jee.server\:OrderProcessingService=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/OrderProcessingService
+org.eclipse.jst.jee.server\:axiomSample=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/axiomSample
+org.eclipse.jst.jee.server\:axisProject=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/axisProject
+org.eclipse.jst.jee.server\:Axis2Test=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/Axis2Test
+org.eclipse.jst.jee.server\:axis2=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/axis2
+org.eclipse.jst.jee.server\:OrderProcessingAxis2=/home/msffayaza/server/apache-tomcat-7.0.53/wtpwebapps/OrderProcessingAxis2

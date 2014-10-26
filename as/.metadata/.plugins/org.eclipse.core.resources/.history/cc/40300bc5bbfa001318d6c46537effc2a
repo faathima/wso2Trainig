@@ -1,0 +1,20 @@
+package com.jaxRs;
+
+import java.net.URL;
+import java.net.URLConnection;
+
+import org.omg.CORBA.portable.InputStream;
+
+public class client {
+	public static void main(String args[]) throws Exception {
+
+		String serviceURL = "http://10.100.4.100:9763/JAX-RS_1.0.0/1.0/services/hello ";
+
+		System.out.println("Sent HTTP GET request to query customer info");
+
+		URL url = new URL(serviceURL + "/hello");
+		URLConnection connection = url.openConnection();
+		connection.setRequestProperty("accept", "text/xml");
+
+	}
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel>
+<name>ffms</name>
+<topic>
+<name>java</name>
+<tutorial>intro</tutorial>
+<tutorial>RMI</tutorial>
+<tutorial>socket</tutorial>
+</topic>
+<topic>
+<name>db</name>
+<tutorial>dbms</tutorial>
+<tutorial>er</tutorial>
+<tutorial>normalization</tutorial>
+</topic>
+</channel>

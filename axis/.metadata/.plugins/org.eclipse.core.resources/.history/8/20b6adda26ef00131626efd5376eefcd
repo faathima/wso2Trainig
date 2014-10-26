@@ -1,0 +1,29 @@
+package com.orderProcessing;
+import com.orderProcessing.OrderStub;
+
+
+public class Client {
+
+		public static void main(String[] args) throws Exception {
+			OrderStub stub = new OrderStub();
+			com.orderProcessing.OrderStub.Total req1= new com.orderProcessing.OrderStub.Total();
+		
+	
+			
+			
+			com.orderProcessing.OrderStub.TotalResponse response1=stub.total(req1);
+				 System.out.println("Response : " + response1.get_return());
+				 
+				 com.orderProcessing.OrderStub.Display req2= new com.orderProcessing.OrderStub.Display();
+					
+					
+					
+					
+					//com.orderProcessing.OrderStub.Display response2=stub.Display(req2);
+						// System.out.println("Response : " + response2.get_return());
+				      
+					   
+		    }
+		
+
+	}

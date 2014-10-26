@@ -1,0 +1,161 @@
+!SESSION 2014-06-28 20:05:56.273 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.363
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.369
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.373
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.374
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.374
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.374
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.375
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.375
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.375
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.375
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.376
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.376
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.376
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.376
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.377
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.377
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.377
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.378
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.378
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.378
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.379
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.379
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-28 20:06:24.379
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.browser 2 0 2014-06-28 20:06:27.658
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+
+!ENTRY org.eclipse.wst.server.core 4 0 2014-06-28 20:08:19.744
+!MESSAGE Server J2EE Preview at localhost failed to start.
+!SESSION 2014-06-29 10:46:06.965 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.335
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.338
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.339
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.339
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.339
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.339
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.340
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.340
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.340
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.340
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.340
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.341
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.341
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.341
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.341
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.342
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.342
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.342
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.342
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.342
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.343
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.343
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2014-06-29 10:46:20.343
+!MESSAGE An extension already exists with id "org.eclipse.ui.navigator.resourceContent".
+
+!ENTRY org.eclipse.ui.browser 2 0 2014-06-29 10:46:24.986
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]

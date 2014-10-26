@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1407769139502
+Build-Jdk: 1.6.0_45
+Built-By: msffayaza
+Bundle-ManifestVersion: 2
+Bundle-Name: org.wso2.carbon.orderprocessing.ui
+Bundle-SymbolicName: org.wso2.carbon.orderprocessing.ui
+Bundle-Version: 4.2.0
+Carbon-Component: UIBundle
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.wso2.carbon.orderprocessing.ui;uses:="javax.servlet,
+ javax.servlet.http,org.apache.axis2.context,org.wso2.carbon.orderproces
+ sing.xsd";version="4.2.0",org.wso2.carbon.orderprocessing.ui.i18n;versi
+ on="4.2.0"
+Import-Package: javax.servlet;resolution:=optional,javax.servlet.http;re
+ solution:=optional;version="[2.6,3)",org.apache.axis2.client;resolution
+ :=optional;version="[1.6,2)",org.apache.axis2.context;resolution:=optio
+ nal;version="[1.6,2)",org.wso2.carbon.orderprocessing.stub;resolution:=
+ optional;version="[4.2,5)",org.wso2.carbon.orderprocessing.xsd;resoluti
+ on:=optional;version="[4.2,5)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
+Tool: Bnd-2.3.0.201405100607

@@ -1,0 +1,16 @@
+package test;
+import java.rmi.RemorteException;
+public class client {
+	public static void main(String[] args) throws Exception {
+	     TestStub stub = new TestStub();
+	     
+	     //Creating the request
+	     test.TestStub.hello  request = new  test.TestStub.hello();
+	     request.setName("Java web");
+	    
+	     //Invoking the service
+	     test.hello.addResponse response  = stub.hello(request);
+	     System.out.println("Response : " + response.get_return());
+	    }
+
+}

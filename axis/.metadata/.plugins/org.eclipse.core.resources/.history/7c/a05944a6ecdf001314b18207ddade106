@@ -1,0 +1,18 @@
+package test;
+
+public class testClient {
+	
+		 public static void main(String[] args) throws Exception {
+		     TestStub stub = new TestStub();
+		     
+		     //Creating the request
+		     test.TestStub.test  request = new test.TestStub.add();
+		     request.setName("Java web");
+		    
+		     //Invoking the service
+		     org.webapp.ws.HelloStub.SayHelloResponse response  = stub.sayHello(request);
+		     System.out.println("Response : " + response.get_return());
+		    }
+		}
+
+

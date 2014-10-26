@@ -1,0 +1,12 @@
+<html>
+<title>
+</title>
+<body>
+<h1>form paraments</h1>
+<form action="localhost:8080/wsREST/rest/university/add" method="post">
+<p>name:<input type="text" name="name"></p>
+<p>age:<input type="text" age="age"></p>
+<input type="submit" value="add">
+</form>
+</body>
+</html>

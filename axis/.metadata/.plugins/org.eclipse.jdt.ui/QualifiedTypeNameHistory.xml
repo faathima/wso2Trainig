@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.rmi.RemoteException"/>
+<fullyQualifiedTypeName name="com.training.HelloStub"/>
+<fullyQualifiedTypeName name="com.training.HelloStub.SayHello"/>
+<fullyQualifiedTypeName name="test.test"/>
+<fullyQualifiedTypeName name="com.orderprocessing.OrderStub.Display"/>
+<fullyQualifiedTypeName name="com.orderprocessing.OrderStub.Total"/>
+<fullyQualifiedTypeName name="com.orderprocessing.OrderCallbackHandler"/>
+<fullyQualifiedTypeName name="com.orderProcessing.OrderStub"/>
+<fullyQualifiedTypeName name="com.orderProcessing.OrderStub.TotalResponse"/>
+<fullyQualifiedTypeName name="com.orderProcessing.OrderItem"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderprocessingStub.AddOreder"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderprocessingStub"/>
+<fullyQualifiedTypeName name="com.orderProcessing.OrderStub.Display"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="org.apache.neethi.PolicyEngine"/>
+<fullyQualifiedTypeName name="org.apache.rampart.RampartMessageData"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderProcessingServiceStub.Addproduct"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderProcessingServiceStub.FindItem"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderProcessingServiceStub.GetOrderDetails"/>
+<fullyQualifiedTypeName name="com.orderProcessing.productDetails"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.AddEntry"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.AddOrder"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.FindItem"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.GetOrderDetails"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.Entry"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.AddEntryResponse"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.FindItemResponse"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.AddOrderResponse"/>
+<fullyQualifiedTypeName name="com.axis2.client.OrderServiceStub.GetOrderDetailsResponse"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderProcessingServiceStub.AddOrder"/>
+<fullyQualifiedTypeName name="com.orderProcessing.Product"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderProcessingServiceStub.Product"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderProcessingServiceStub.AddOrderResponse"/>
+<fullyQualifiedTypeName name="com.orderprocessing.client.OrderProcessingStub.AddProduct"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>
