@@ -1,0 +1,44 @@
+body {
+	background-color: #f2f4fb;
+}
+
+h1 {
+	color: #008B8B;
+	text-align: center;
+}
+
+h2 {
+	color: #5F9EA0;
+	text-align: center;
+}
+
+form input[type=submit] {
+	align: "center";
+}
+
+table {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-align: center;
+	align: center;
+}
+
+th,td {
+	border: 1px solid black;
+	text-align: center;
+	align: center;
+}
+
+td,th {
+	text-color: #6495ED;
+	text-align: center;
+	border: 1px solid bule;
+	padding: 3px 7px 2px 7px;
+}
+
+th {
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	background-color: #F0F8FF;
+	color: #0000FF;
+}

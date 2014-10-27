@@ -1,0 +1,245 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://orderprocessing.carbon.wso2.org" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ax2100="http://orderprocessing.carbon.wso2.org/xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://orderprocessing.carbon.wso2.org">
+    <wsdl:documentation>orderprocessing</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://orderprocessing.carbon.wso2.org/xsd">
+            <xs:complexType name="Product">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="productId" type="xs:int"/>
+                    <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="quantity" type="xs:int"/>
+                    <xs:element minOccurs="0" name="unitPrice" type="xs:float"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax2101="http://orderprocessing.carbon.wso2.org/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://orderprocessing.carbon.wso2.org">
+            <xs:import namespace="http://orderprocessing.carbon.wso2.org/xsd"/>
+            <xs:element name="viewOrder">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="orderID" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="viewOrderResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:double"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addProduct">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="product" nillable="true" type="ax2101:Product"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addProductResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax2101:Product"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="viewProduct">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="viewProductResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax2101:Product"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addOrder">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="itemList" nillable="true" type="xs:string"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="itemQtyList" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addOrderResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="addOrderRequest">
+        <wsdl:part name="parameters" element="ns:addOrder"/>
+    </wsdl:message>
+    <wsdl:message name="addOrderResponse">
+        <wsdl:part name="parameters" element="ns:addOrderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="addProductRequest">
+        <wsdl:part name="parameters" element="ns:addProduct"/>
+    </wsdl:message>
+    <wsdl:message name="addProductResponse">
+        <wsdl:part name="parameters" element="ns:addProductResponse"/>
+    </wsdl:message>
+    <wsdl:message name="viewOrderRequest">
+        <wsdl:part name="parameters" element="ns:viewOrder"/>
+    </wsdl:message>
+    <wsdl:message name="viewOrderResponse">
+        <wsdl:part name="parameters" element="ns:viewOrderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="viewProductRequest">
+        <wsdl:part name="parameters" element="ns:viewProduct"/>
+    </wsdl:message>
+    <wsdl:message name="viewProductResponse">
+        <wsdl:part name="parameters" element="ns:viewProductResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="orderprocessingPortType">
+        <wsdl:operation name="addOrder">
+            <wsdl:input message="ns:addOrderRequest" wsaw:Action="urn:addOrder"/>
+            <wsdl:output message="ns:addOrderResponse" wsaw:Action="urn:addOrderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="addProduct">
+            <wsdl:input message="ns:addProductRequest" wsaw:Action="urn:addProduct"/>
+            <wsdl:output message="ns:addProductResponse" wsaw:Action="urn:addProductResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="viewOrder">
+            <wsdl:input message="ns:viewOrderRequest" wsaw:Action="urn:viewOrder"/>
+            <wsdl:output message="ns:viewOrderResponse" wsaw:Action="urn:viewOrderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="viewProduct">
+            <wsdl:input message="ns:viewProductRequest" wsaw:Action="urn:viewProduct"/>
+            <wsdl:output message="ns:viewProductResponse" wsaw:Action="urn:viewProductResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="orderprocessingSoap11Binding" type="ns:orderprocessingPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="addOrder">
+            <soap:operation soapAction="urn:addOrder" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addProduct">
+            <soap:operation soapAction="urn:addProduct" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="viewOrder">
+            <soap:operation soapAction="urn:viewOrder" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="viewProduct">
+            <soap:operation soapAction="urn:viewProduct" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="orderprocessingSoap12Binding" type="ns:orderprocessingPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="addOrder">
+            <soap12:operation soapAction="urn:addOrder" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addProduct">
+            <soap12:operation soapAction="urn:addProduct" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="viewOrder">
+            <soap12:operation soapAction="urn:viewOrder" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="viewProduct">
+            <soap12:operation soapAction="urn:viewProduct" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="orderprocessingHttpBinding" type="ns:orderprocessingPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="addOrder">
+            <http:operation location="addOrder"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addProduct">
+            <http:operation location="addProduct"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="viewOrder">
+            <http:operation location="viewOrder"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="viewProduct">
+            <http:operation location="viewProduct"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="orderprocessing">
+        <wsdl:port name="orderprocessingHttpsSoap11Endpoint" binding="ns:orderprocessingSoap11Binding">
+            <soap:address location="https://10.100.4.100:9443/services/orderprocessing.orderprocessingHttpsSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="orderprocessingHttpsSoap12Endpoint" binding="ns:orderprocessingSoap12Binding">
+            <soap12:address location="https://10.100.4.100:9443/services/orderprocessing.orderprocessingHttpsSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="orderprocessingHttpsEndpoint" binding="ns:orderprocessingHttpBinding">
+            <http:address location="https://10.100.4.100:9443/services/orderprocessing.orderprocessingHttpsEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

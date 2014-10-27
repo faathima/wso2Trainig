@@ -1,0 +1,55 @@
+<h2>Add new patient details</h2>
+<form method="post" align="center">
+	<table align="center">
+		<tr>
+			<td align="right">Hospital:</td>
+			<td align="left"><input type="text" name="Hospital" /></td>
+		</tr>
+		<tr>
+			<td align="right">Name:</td>
+			<td align="left"><input type="text" name="Name" /></td>
+		</tr>
+		<tr>
+			<td align="right">Age:</td>
+			<td align="left"><input type="text" name="Age" /></td>
+		</tr>
+		<tr>
+			<td align="right">Diagnosis:</td>
+			<td align="left"><input type="text" name="Diagnosis" /></td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2"><input type="submit"
+				value="Add Patient">
+			</td>
+		</tr>
+	</table>
+
+</form>
+
+<%
+// if it's post request to add a employee
+if(request.getMethod() == "POST"){
+var Hospital = request.getParameter("Hospital");
+var Name = request.getParameter("Name");
+var Age = request.getParameter("Age");
+var Diagnosis = request.getParameter("Diagnosis");
+if(!Hospital || !Name || !Age || !Diagnosis){
+response.status = 400;
+print("<script>alert('Patient details cannot be empty!');</script>");
+} else {
+json.patient.push(
+{
+	"Hospital":Hospital, "Name":Name, "Age": Age, "Diagnosis":Diagnosis
+}
+);
+
+var file = new File("patient.json");
+file.open("w");
+file.write(json);
+file.close();
+response.status = 200;
+}
+}
+
+%>
+<hr />
